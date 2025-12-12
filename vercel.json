@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/", "dest": "/src/web/index.html" },
+    { "src": "/(.*)", "dest": "/src/web/$1" }
+  ]
+}
