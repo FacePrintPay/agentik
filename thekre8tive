@@ -1,0 +1,40 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+STACK="$HOME/full_stack_integration.sh"
+
+usage(){
+  cat <<EOF
+Usage: thekre8tive {up|down|restart|status|logs}
+
+Commands:
+  up       - Start all services
+  down     - Stop all services
+  restart  - Restart all services
+  status   - Check service health
+  logs     - View service logs
+
+Requires: $STACK
+EOF
+}
+
+cmd="${1:-help}"
+
+case "$cmd" in
+  up|down|restart|status|logs)
+    if [ ! -x "$STACK" ]; then
+      echo "ERROR: Missing or not executable: $STACK" >&2
+      echo "Please ensure full_stack_integration.sh exists" >&2
+      exit 1
+    fi
+    bash "$STACK" "$cmd"
+    ;;
+  help|--help|-h)
+    usage
+    ;;
+  *)
+    echo "ERROR: Unknown command: $cmd" >&2
+    usage
+    exit 1
+    ;;
+esac
