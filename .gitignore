@@ -1,6 +1,9 @@
 *.log
+*.pid
 .pids/
 __pycache__/
 *.pyc
 .env
 .DS_Store
+tasks/
+outputs/
