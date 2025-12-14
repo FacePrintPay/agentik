@@ -1,132 +1,105 @@
-# 🌍 AGENTIK™
+# AGENTIK™ (Agentik)
 
-**The first fully sovereign, local-first AGI agent orchestration platform.**
+Local-first AGI agent orchestration platform — built to run **on your hardware**, keep data **on-device**, and ship automations fast.
 
-Built by **CyGel** & **The Brickle Brothers** for **FacePrintPay / TheKre8tive**
+**Repo:** `FacePrintPay/agentik`  
+**UI:** `product/web/index.html`  
+**Installer:** `install.sh`
 
+---
+
+## Why AGENTIK™?
+
+Most AI platforms:
+- charge per token/seat
+- move your data off-device
+- lock you into their ecosystem
+
+AGENTIK™:
+- runs on **YOUR** hardware
+- keeps data **local**
+- stays modular and composable
+
+---
+
+## Directory Structure
+
+```
+agentik/
+├── README.md
+├── .gitignore
+├── install.sh
+├── requirements.txt              # generated if Python deps detected
+├── product/
+│   ├── web/
+│   │   └── index.html            # production web UI
+│   └── docs/
+├── docs/
+│   ├── deployment.md
+│   └── architecture.md           # (add as needed)
+├── scripts/
+│   └── ship-agentik.sh           # normalize + push script
+├── src/
+├── tests/
+└── config/
+```
+
+---
+
+## Quick Start (Termux)
+
+### 1) Authenticate GitHub CLI
 ```bash
-curl -fsSL https://raw.githubusercontent.com/FacePrintPay/TheKre8tive/main/install.sh | bash
+gh auth login
+gh auth status
 ```
 
----
-
-## 🎯 What Is This?
-
-**AGENTIK™** is a complete full-stack AGI agent orchestration platform that runs **entirely locally**:
-
-- 🤖 **7 specialized AI agents** (valuation, market, finance, PR, outreach, income, bundling)
-- 📊 **Real-time web dashboard** with live monitoring
-- 🔄 **Task queue management** with concurrent execution
-- 🔌 **RESTful APIs** for programmatic control
-- 💪 **Zero cloud dependencies** (except AI model APIs)
-
-**Philosophy:** You own your compute. You own your data. You own your AI.
-
----
-
-## 🚀 Quick Start
-
+### 2) Run the ship script
 ```bash
-# Install
-curl -fsSL https://raw.githubusercontent.com/FacePrintPay/TheKre8tive/main/install.sh | bash
-
-# Start
-thekre8tive up
-
-# Open dashboard
-http://127.0.0.1:8765/index.html
+cd ~/TheKre8tive
+chmod +x ship-agentik.sh
+./ship-agentik.sh
 ```
 
-That's it. **You now have a full AGI platform running locally.**
-
 ---
 
-## 💡 Why AGENTIK?
+## Development
 
-Every AI platform today rents you your own intelligence:
-- 💸 Charge per token/request/seat
-- 📡 Send your data to their servers
-- 🔒 Lock you into their ecosystem
-- 📊 Train on your private data
-
-**AGENTIK is different:**
-- 🏠 Runs on YOUR hardware
-- 🆓 Pay for compute once, use forever
-- 🔓 Open architecture
-- 🔐 Data never leaves your device
-
-**The revolution will not be hosted.**
-
----
-
-## 🏗️ Architecture
-
-```
-Web UI → API Layer → Orchestrator → Agents → Outputs
-```
-
-Everything runs locally. Tasks are JSON files. No database required.
-
----
-
-## 📦 What's Included
-
-- **Full-stack web UI** with real-time monitoring
-- **REST APIs** (Keys API + Swarm API)
-- **7 specialized agents** ready out-of-the-box
-- **Task queue system** with concurrent execution
-- **Health monitoring** with auto-restart
-- **One-line installer**
-
----
-
-## 🎮 Usage
-
+### Node (if present)
 ```bash
-thekre8tive up          # Start all services
-thekre8tive down        # Stop all services
-thekre8tive restart     # Restart
-thekre8tive status      # Check health
-thekre8tive logs        # View logs
+npm install
+npm audit fix
+npm update
+npx eslint . --ext .js,.jsx,.ts,.tsx --fix
+```
+
+### Python (if present)
+```bash
+pip install -r requirements.txt
 ```
 
 ---
 
-## 📊 Performance
+## Git Rules (YesQuid Pro)
 
-Tested on Samsung Galaxy S21 (Termux):
-- **5 tasks/second** (concurrent)
-- **<100ms** API response time
-- **~200MB** memory usage
-- **3 second** startup time
+- Conventional commits: `feat:`, `fix:`, `docs:`, `chore:`
+- Branches: `main`, `develop`, `feature/*`, `fix/*`
 
 ---
 
-## 🙏 Credits
+## Embedded Repo Warning (Important)
 
-**Built by:** CyGel & The Brickle Brothers  
-**Company:** FacePrintPay / TheKre8tive  
-**Powered by:** Claude (Anthropic), FastAPI, Python, Bash
+If you see:
+`warning: adding embedded git repository`
 
----
-
-## 📄 License
-
-**Copyright © 2025 FacePrintPay / TheKre8tive**
-
-Proprietary software. All rights reserved.
-
-For licensing: hello@faceprintpay.com
+That means a folder inside your repo has its own `.git` directory.  
+This repo ships with a guard that automatically:
+- removes that folder from the index (if tracked)
+- adds it to `.gitignore`
 
 ---
 
-## 📞 Contact
+## Credits
 
-- 🌐 Website: https://faceprintpay.com
-- 🐦 Twitter: [@FacePrintPay](https://twitter.com/FacePrintPay)
-- 📧 Email: hello@faceprintpay.com
-- 💬 GitHub: [Issues](https://github.com/FacePrintPay/TheKre8tive/issues)
-
----
-
-**The revolution will not be hosted.** 🌍
+Built by **CyGel** & **The Brickle Brothers**  
+FacePrintPay / TheKre8tive
