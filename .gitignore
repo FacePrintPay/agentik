@@ -7,3 +7,22 @@ __pycache__/
 .DS_Store
 tasks/
 outputs/
+
+# ---- Termux/OS junk ----
+.DS_Store
+*.log
+
+# ---- Caches that should NEVER be committed ----
+.cargo/
+.rustup/
+.node-gyp/
+npm-debug.log*
+.yarn/
+.pnpm-store/
+.cache/
+.venv/
+__pycache__/
+*.pyc
+
+# ---- Nested repo folder (don’t track as embedded repo) ----
+AGENTIK/
