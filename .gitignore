@@ -26,3 +26,30 @@ __pycache__/
 
 # ---- Nested repo folder (don’t track as embedded repo) ----
 AGENTIK/
+
+# --- Termux / local junk ---
+.cache/
+.tmp/
+*.log
+*.pid
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# --- Node ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Rust / Cargo ---
+.cargo/registry/
+.cargo/git/
+target/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
