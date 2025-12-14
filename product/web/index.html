@@ -1,352 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGENTIK™ - Local-First AGI Platform</title>
-    <meta name="description" content="Complete AGI agent orchestration platform. Run autonomous AI agents locally on your phone. Zero cloud dependencies.">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AGENTIK™ — local-first agent orchestration. Run on your hardware. Data stays on-device." />
+  <title>AGENTIK™ | Local-First Agent Orchestration</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .hero { text-align: center; padding: 60px 20px; position: relative; }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.10) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .logo {
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.30);
+      position: relative;
+    }
+    .tagline { font-size: 1.25rem; font-weight: 300; margin-bottom: 12px; opacity: 0.95; }
+    .subtitle {
+      font-size: 1.05rem;
+      opacity: 0.85;
+      max-width: 720px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary { background: #ffffff; color: #667eea; box-shadow: 0 8px 30px rgba(0,0,0,0.20); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.30); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.14);
+      color: #ffffff;
+      border: 2px solid rgba(255,255,255,0.28);
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.45); }
 
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            position: relative;
-        }
+    .section { background: #ffffff; color: #1a1a2e; padding: 72px 20px; }
+    .container { max-width: 1120px; margin: 0 auto; }
+    .title { text-align: center; font-size: 2.25rem; margin-bottom: 44px; color: #667eea; }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 10px 34px rgba(0,0,0,0.10);
+      transition: transform 0.25s ease;
+    }
+    .card:hover { transform: translateY(-6px); }
+    .icon { font-size: 2.4rem; margin-bottom: 14px; }
+    .card-title { font-size: 1.25rem; font-weight: 900; margin-bottom: 10px; color: #667eea; }
+    .card-text { line-height: 1.6; opacity: 0.85; }
 
-        .logo {
-            font-size: 4rem;
-            font-weight: 900;
-            letter-spacing: -2px;
-            margin-bottom: 20px;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            position: relative;
-        }
+    .install {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    pre {
+      background: #1a1a2e;
+      color: #2ecc71;
+      padding: 18px;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-size: 0.98rem;
+      text-align: left;
+    }
 
-        .tagline {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 15px;
-            opacity: 0.95;
-        }
+    footer { background: #1a1a2e; color: #ffffff; padding: 38px 20px; text-align: center; }
+    .links { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px; }
+    .link { color: #ffffff; text-decoration: none; opacity: 0.8; }
+    .link:hover { opacity: 1; }
 
-        .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.85;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 16px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #667eea;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-        }
-
-        .btn-secondary {
-            background: rgba(255,255,255,0.15);
-            color: white;
-            border: 2px solid rgba(255,255,255,0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.25);
-            border-color: rgba(255,255,255,0.5);
-        }
-
-        .features {
-            background: white;
-            color: #333;
-            padding: 80px 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
-            color: #667eea;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .feature-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #667eea;
-        }
-
-        .feature-description {
-            line-height: 1.6;
-            opacity: 0.8;
-        }
-
-        .stats {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .stat {
-            padding: 20px;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .footer {
-            background: #1a1a2e;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .footer-link {
-            color: white;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .footer-link:hover {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 3rem;
-            }
-            .tagline {
-                font-size: 1.2rem;
-            }
-            .cta-buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .logo { font-size: 2.8rem; }
+      .cta { flex-direction: column; align-items: stretch; }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="hero">
-        <div class="logo">🌍 AGENTIK™</div>
-        <div class="tagline">Local-First AGI Agent Orchestration</div>
-        <div class="subtitle">
-            Run a complete autonomous AI agent swarm on your phone. Offline. No cloud. No tracking. No rent.
+  <header class="hero">
+    <h1 class="logo">🌍 AGENTIK™</h1>
+    <p class="tagline">Local-First Agent Orchestration</p>
+    <p class="subtitle">
+      Run agent workflows on your hardware. Keep data on-device. Ship automations fast.
+    </p>
+
+    <nav class="cta" aria-label="Primary actions">
+      <a class="btn btn-primary" href="#install">Install</a>
+      <a class="btn btn-secondary" href="https://github.com/FacePrintPay/agentik" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Built for Sovereignty</h2>
+
+        <div class="grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">🤖</div>
+            <h3 class="card-title">Agent-ready structure</h3>
+            <p class="card-text">Clean folders for API, orchestrator, agents, monitoring, and web.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🔒</div>
+            <h3 class="card-title">Local-first by design</h3>
+            <p class="card-text">No mandatory cloud dependency. You choose your integrations.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">⚡</div>
+            <h3 class="card-title">Fast iteration</h3>
+            <p class="card-text">Scriptable workflows. Ship updates in minutes, not weeks.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🧩</div>
+            <h3 class="card-title">Modular + composable</h3>
+            <p class="card-text">Build plug-in style features without collapsing the repo.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">📱</div>
+            <h3 class="card-title">Termux-friendly</h3>
+            <p class="card-text">Built to run on Android via Termux and standard Linux shells.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🆓</div>
+            <h3 class="card-title">No monthly rent</h3>
+            <p class="card-text">Pay for compute once. Build value on top of your own stack.</p>
+          </article>
         </div>
-        <div class="cta-buttons">
-            <a href="#install" class="btn btn-primary">Get Started Free</a>
-            <a href="https://github.com/FacePrintPay/TheKre8tive" class="btn btn-secondary" target="_blank">View on GitHub</a>
-        </div>
+      </div>
+    </section>
+
+    <section id="install" class="section">
+      <div class="install">
+        <h2 class="title">Install in 60 Seconds</h2>
+
+        <pre><code>curl -fsSL https://raw.githubusercontent.com/FacePrintPay/agentik/main/install.sh | bash</code></pre>
+
+        <p style="margin-top: 18px; color: #334;">
+          Then open the Web UI at:
+          <strong>product/web/index.html</strong>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a class="link" href="https://github.com/FacePrintPay/agentik" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="link" href="https://bitpayy.godaddysites.com/" target="_blank" rel="noreferrer">Bitpayy</a>
     </div>
 
-    <div class="features">
-        <div class="container">
-            <h2 class="section-title">Built for Sovereignty</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <div class="feature-title">7 Specialized Agents</div>
-                    <div class="feature-description">
-                        Valuation, market research, finance, PR, outreach, income scanning, and bundling agents ready to execute.
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <div class="feature-title">Real-Time Dashboard</div>
-                    <div class="feature-description">
-                        Live monitoring of task queue, agent status, and system health. Know exactly what's happening.
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <div class="feature-title">Complete Privacy</div>
-                    <div class="feature-description">
-                        Everything runs locally. Your data never leaves your device. No telemetry. No tracking.
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <div class="feature-title">Blazing Fast</div>
-                    <div class="feature-description">
-                        Process 5+ tasks per second with concurrent execution. No API rate limits. No throttling.
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <div class="feature-title">Runs Anywhere</div>
-                    <div class="feature-description">
-                        Android (Termux), Linux, macOS, Raspberry Pi. If it runs Python, it runs AGENTIK.
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🆓</div>
-                    <div class="feature-title">Zero Recurring Costs</div>
-                    <div class="feature-description">
-                        No subscriptions. No per-token fees. Pay for compute once, use forever.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="stats">
-        <div class="container">
-            <h2 class="section-title">By The Numbers</h2>
-            <div class="stats-grid">
-                <div class="stat">
-                    <div class="stat-number">7</div>
-                    <div class="stat-label">Specialized Agents</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Tasks/Second</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Local-First</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">$0</div>
-                    <div class="stat-label">Monthly Cost</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="install" class="features">
-        <div class="container" style="max-width: 800px;">
-            <h2 class="section-title">Install in 60 Seconds</h2>
-            <div style="background: #f5f7fa; padding: 30px; border-radius: 20px; margin-bottom: 40px;">
-                <pre style="background: #1a1a2e; color: #2ecc71; padding: 20px; border-radius: 10px; overflow-x: auto; font-size: 1.1rem;"><code>curl -fsSL https://raw.githubusercontent.com/FacePrintPay/TheKre8tive/main/install.sh | bash</code></pre>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="font-size: 1.2rem; margin-bottom: 20px; color: #666;">
-                    Then start with:
-                </p>
-                <pre style="background: #f5f7fa; padding: 20px; border-radius: 10px; display: inline-block; font-size: 1.2rem; color: #667eea; font-weight: 600;"><code>thekre8tive up</code></pre>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="https://github.com/FacePrintPay/TheKre8tive" class="footer-link" target="_blank">GitHub</a>
-                <a href="https://github.com/FacePrintPay/TheKre8tive/blob/main/docs" class="footer-link" target="_blank">Documentation</a>
-                <a href="https://faceprintpay.com" class="footer-link" target="_blank">FacePrintPay</a>
-                <a href="https://twitter.com/FacePrintPay" class="footer-link" target="_blank">Twitter</a>
-            </div>
-            <div style="opacity: 0.7; margin-top: 20px;">
-                <p>© 2025 FacePrintPay / TheKre8tive. Built by CyGel & The Brickle Brothers.</p>
-                <p style="margin-top: 10px;">The revolution will not be hosted. 🌍</p>
-            </div>
-        </div>
-    </div>
+    <p style="opacity: 0.75;">© 2025 FacePrintPay / TheKre8tive. Built by CyGel & The Brickle Brothers.</p>
+    <p style="opacity: 0.75; margin-top: 8px;">The revolution will not be hosted. 🌍</p>
+  </footer>
 </body>
 </html>
