@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGENTIK™ Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .header h1 { font-size: 2rem; margin-bottom: 10px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-2px); }
+    .card h3 { margin-bottom: 15px; color: #667eea; }
+    .btn {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 5px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #5a6fd8; }
+    .btn-secondary { background: #6c757d; }
+    .btn-secondary:hover { background: #5a6268; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .status { padding: 10px; border-radius: 4px; margin: 10px 0; }
+    .status.success { background: #d4edda; color: #155724; }
+    .status.error { background: #f8d7da; color: #721c24; }
+    .status.info { background: #d1ecf1; color: #0c5460; }
+    .list { list-style: none; }
+    .list li { padding: 10px; border-bottom: 1px solid #eee; }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+    }
+    .close { float: right; cursor: pointer; font-size: 24px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>🤖 AGENTIK™ Dashboard</h1>
+    <p>Local-first agent orchestration platform</p>
+    <button class="btn" onclick="location.href='../index.html'">← Back to Home</button>
+  </header>
+
+  <div class="container">
+    <div id="status" class="status info" style="display: none;"></div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>📋 Agents</h3>
+        <ul id="agents-list" class="list"></ul>
+        <button class="btn" onclick="showModal('agent-modal')">+ Add Agent</button>
+      </div>
+
+      <div class="card">
+        <h3>🔄 Workflows</h3>
+        <ul id="workflows-list" class="list"></ul>
+        <button class="btn" onclick="showModal('workflow-modal')">+ Create Workflow</button>
+      </div>
+
+      <div class="card">
+        <h3>▶️ Execute Workflow</h3>
+        <div class="form-group">
+          <label for="execute-workflow-id">Workflow ID:</label>
+          <input type="text" id="execute-workflow-id" placeholder="workflow-1">
+        </div>
+        <button class="btn" onclick="executeWorkflow()">Execute</button>
+        <div id="execution-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agent Modal -->
+  <div id="agent-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideModal('agent-modal')">&times;</span>
+      <h3>Add New Agent</h3>
+      <form id="agent-form">
+        <div class="form-group">
+          <label for="agent-id">Agent ID:</label>
+          <input type="text" id="agent-id" required>
+        </div>
+        <div class="form-group">
+          <label for="agent-name">Name:</label>
+          <input type="text" id="agent-name" required>
+        </div>
+        <div class="form-group">
+          <label for="agent-description">Description:</label>
+          <textarea id="agent-description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="agent-type">Type:</label>
+          <select id="agent-type" required>
+            <option value="TaskRunnerAgent">Task Runner</option>
+            <option value="DataProcessorAgent">Data Processor</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Create Agent</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Workflow Modal -->
+  <div id="workflow-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideModal('workflow-modal')">&times;</span>
+      <h3>Create New Workflow</h3>
+      <form id="workflow-form">
+        <div class="form-group">
+          <label for="workflow-id">Workflow ID:</label>
+          <input type="text" id="workflow-id" required>
+        </div>
+        <div class="form-group">
+          <label for="workflow-name">Name:</label>
+          <input type="text" id="workflow-name" required>
+        </div>
+        <div class="form-group">
+          <label for="workflow-description">Description:</label>
+          <textarea id="workflow-description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="workflow-agents">Agent IDs (comma-separated):</label>
+          <input type="text" id="workflow-agents" placeholder="agent-1, agent-2" required>
+        </div>
+        <button type="submit" class="btn">Create Workflow</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = 'http://localhost:8000';
+
+    // Utility functions
+    function showStatus(message, type = 'info') {
+      const statusEl = document.getElementById('status');
+      statusEl.textContent = message;
+      statusEl.className = `status ${type}`;
+      statusEl.style.display = 'block';
+      setTimeout(() => statusEl.style.display = 'none', 5000);
+    }
+
+    function showModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+
+    function hideModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Load data on page load
+    async function loadData() {
+      try {
+        await loadAgents();
+        await loadWorkflows();
+      } catch (error) {
+        showStatus('Failed to load data: ' + error.message, 'error');
+      }
+    }
+
+    // Agents
+    async function loadAgents() {
+      const response = await fetch(`${API_BASE}/agents`);
+      const agents = await response.json();
+      const listEl = document.getElementById('agents-list');
+      listEl.innerHTML = agents.map(agent =>
+        `<li><strong>${agent.name}</strong> (${agent.id})<br>${agent.description}</li>`
+      ).join('');
+    }
+
+    document.getElementById('agent-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const agent = {
+        id: document.getElementById('agent-id').value,
+        name: document.getElementById('agent-name').value,
+        description: document.getElementById('agent-description').value,
+        type: document.getElementById('agent-type').value
+      };
+
+      try {
+        const response = await fetch(`${API_BASE}/agents`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(agent)
+        });
+
+        if (response.ok) {
+          showStatus('Agent created successfully', 'success');
+          hideModal('agent-modal');
+          document.getElementById('agent-form').reset();
+          await loadAgents();
+        } else {
+          const error = await response.json();
+          showStatus('Failed to create agent: ' + error.detail, 'error');
+        }
+      } catch (error) {
+        showStatus('Error creating agent: ' + error.message, 'error');
+      }
+    });
+
+    // Workflows
+    async function loadWorkflows() {
+      const response = await fetch(`${API_BASE}/workflows`);
+      const workflows = await response.json();
+      const listEl = document.getElementById('workflows-list');
+      listEl.innerHTML = workflows.map(workflow =>
+        `<li><strong>${workflow.name}</strong> (${workflow.id})<br>${workflow.description}<br>Status: ${workflow.status}</li>`
+      ).join('');
+    }
+
+    document.getElementById('workflow-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const workflow = {
+        id: document.getElementById('workflow-id').value,
+        name: document.getElementById('workflow-name').value,
+        description: document.getElementById('workflow-description').value,
+        agents: document.getElementById('workflow-agents').value.split(',').map(id => id.trim())
+      };
+
+      try {
+        const response = await fetch(`${API_BASE}/workflows`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(workflow)
+        });
+
+        if (response.ok) {
+          showStatus('Workflow created successfully', 'success');
+          hideModal('workflow-modal');
+          document.getElementById('workflow-form').reset();
+          await loadWorkflows();
+        } else {
+          const error = await response.json();
+          showStatus('Failed to create workflow: ' + error.detail, 'error');
+        }
+      } catch (error) {
+        showStatus('Error creating workflow: ' + error.message, 'error');
+      }
+    });
+
+    // Execute workflow
+    async function executeWorkflow() {
+      const workflowId = document.getElementById('execute-workflow-id').value;
+      if (!workflowId) {
+        showStatus('Please enter a workflow ID', 'error');
+        return;
+      }
+
+      try {
+        const response = await fetch(`${API_BASE}/workflows/${workflowId}/execute`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ inputs: {} })
+        });
+
+        const result = await response.json();
+        const resultEl = document.getElementById('execution-result');
+
+        if (response.ok) {
+          resultEl.innerHTML = `<div class="status success">Execution completed: ${JSON.stringify(result, null, 2)}</div>`;
+          await loadWorkflows(); // Refresh status
+        } else {
+          resultEl.innerHTML = `<div class="status error">Execution failed: ${result.detail || JSON.stringify(result)}</div>`;
+        }
+      } catch (error) {
+        document.getElementById('execution-result').innerHTML = `<div class="status error">Error: ${error.message}</div>`;
+      }
+    }
+
+    // Load data when page loads
+    window.addEventListener('load', loadData);
+  </script>
+</body>
+</html>

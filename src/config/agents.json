@@ -1,0 +1,20 @@
+[
+  {
+    "id": "task-runner-1",
+    "name": "Basic Task Runner",
+    "description": "A simple agent that can execute basic tasks like echoing messages",
+    "type": "TaskRunnerAgent",
+    "config": {
+      "max_execution_time": 30
+    }
+  },
+  {
+    "id": "data-processor-1",
+    "name": "Text Processor",
+    "description": "Processes text data - word counting, case conversion, etc.",
+    "type": "DataProcessorAgent",
+    "config": {
+      "supported_operations": ["count_words", "uppercase", "lowercase"]
+    }
+  }
+]
