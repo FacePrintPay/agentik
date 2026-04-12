@@ -1,3 +1,7 @@
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 name: C25 Agent Autonomous Deploy
 on:
   push: { branches: [main, master] }

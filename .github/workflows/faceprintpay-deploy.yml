@@ -1,3 +1,7 @@
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 name: FacePrintPay CI/CD
 on:
   push:
