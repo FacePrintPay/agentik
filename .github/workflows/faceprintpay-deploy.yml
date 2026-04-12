@@ -1,0 +1,41 @@
+name: FacePrintPay CI/CD
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+jobs:
+  build-and-deploy:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Setup Node
+        if: hashFiles('package.json') != ''
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        if: hashFiles('package.json') != ''
+        run: npm install --legacy-peer-deps || true
+      - name: Build
+        if: hashFiles('package.json') != ''
+        run: npm run build --if-present || true
+      - name: Setup Python
+        if: hashFiles('requirements.txt') != ''
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install Python deps
+        if: hashFiles('requirements.txt') != ''
+        run: pip install -r requirements.txt || true
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: success()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

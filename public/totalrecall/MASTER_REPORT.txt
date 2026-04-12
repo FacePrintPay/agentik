@@ -1,0 +1,626 @@
+================================================================================
+        TOTALRECALL v4.0 — COMPREHENSIVE FORENSIC REPORT
+         SOVEREIGN DIGITAL EVIDENCE COMPILATION ENGINE
+    90-Day Federal Sweep + 365-Day Sovereign Stack
+================================================================================
+  Case Title   : White v. Google, OpenAI, Anthropic, Blackbox.ai
+  Case Number  : GREENSBORO-DIST-2026-MRGGTIP
+  Investigator : Cygel Sampson White (#MrGGTP)
+  Engine       : TotalRecall-v4.0
+  Run Date     : 2026-03-12 05:41:29 EDT
+  Device       : aarch64 / Android / Termux
+  Kernel       : 5.15.180-android13-8-00021-g46a5565a0982-ab13743836
+================================================================================
+  LEGAL BASIS:
+  CCPA ID: 215473345478779 | Sherman 15 U.S.C. 1-7 | Clayton 15 U.S.C. 12-27
+  FTC 15 U.S.C. 45 | DTSA 18 U.S.C. 1836 | CFAA 18 U.S.C. 1030
+  Spoliation/FRCP Rule 37 | DMCA | NC Computer Crimes Act
+================================================================================
+
+================================================================================
+  PAGE 1 — EXECUTIVE SUMMARY
+================================================================================
+
+  TotalRecall v4.0 completed a full forensic sweep on 2026-03-12.
+  The engine scanned Termux home, SD card, and all mounted storage for
+  digital evidence relevant to White v. Google, OpenAI, Anthropic, Blackbox.ai.
+
+  Time windows:
+    90-Day Federal  : 2025-12-12 through 2026-03-12
+    365-Day Stack   : 2025-03-12 through 2026-03-12
+
+  TOTAL EVIDENCE ITEMS CATALOGED : 6305
+
+  Evidence was found across 11 categories: source code repositories,
+  sovereign platform files, forensic archives, Obsidian documentation
+  vaults, Google Cloud artifacts, SHA256 verified files, and timestamped
+  screenshots. All files recorded with full path, timestamp, and file size.
+  SHA256 hashes computed for sovereign files. Git commit histories extracted
+  from all repositories.
+
+  Archive : /data/data/com.termux/files/home/TOTALRECALL_v4_2026-03-12_05-32-49.tar.gz
+  SHA256  : 5696ed037443f36b24524ed967ca818969bb8ac1d6699916d52a335851c95d51
+
+================================================================================
+  PAGE 2 — EVIDENCE INVENTORY SUMMARY
+================================================================================
+
+  CATEGORY                           COUNT
+  --------                           -----
+  Total Evidence Items             : 6305
+  90-Day Federal Files             : 1935
+  365-Day Sovereign Code Stack     : 1955
+  Git Repositories Found           : 236
+  Total Git Commits                : 25966
+  Sovereign Platform Files         : 1797
+  Obsidian Vault Notes             : 0
+0 (in 0
+0 vaults)
+  TAR / GZ Archives                : 16
+  SHA256 Verified Files            : 37
+  Google Cloud Artifacts           : 2
+  ZFiles / Forensic Files          : 127
+  Screenshots (90-day window)      : 200
+
+  GIT TIMELINE:
+  Earliest Commit                  : 2014-04-03
+  Latest Commit                    : 2026-03-11
+  Total Commits All Repos          : 25966
+
+  STORAGE AT TIME OF SCAN:
+  Termux Home Size                 : 11G
+  SD Card                          : /dev/fuse       108G 106G  1.5G  99% /storage/emulated
+  Report Files                     : 6
+  Report Size                      : 3.0M
+
+================================================================================
+  PAGE 3 — GIT REPOSITORY ANALYSIS
+================================================================================
+
+  236 repositories found. First commit: 2014-04-03.
+  Last commit: 2026-03-11. Total commits: 25966.
+  This establishes a documented development timeline directly from git history.
+
+  REPOSITORY LIST:
+--------------------------------------------------------------------------------
+[REPO] agentik | First:2025-12-12 18:53:34 -0500 | Last:2026-03-11 18:39:22 -0400 | Commits:16 | https://github.com/FacePrintPay/agentik.git
+[REPO] ai-kre8tive-sovereign-genesis | First:2025-06-14 06:01:11 -0400 | Last:2026-02-25 19:49:12 -0500 | Commits:15 | https://github.com/FacePrintPay/ai-kre8tive-sovereign-genesis.git
+[REPO] ai-web-extensions | First:2023-03-31 18:23:31 -0700 | Last:2026-02-25 12:58:48 -0500 | Commits:16095 | https://github.com/FacePrintPay/ai-web-extensions.git
+[REPO] aikre8tive | First:2025-08-26 18:02:58 -0400 | Last:2026-02-25 19:58:14 -0500 | Commits:15 | https://github.com/FacePrintPay/aikre8tive.git
+[REPO] AiKre8tive- | First:2025-09-22 18:45:20 -0400 | Last:2026-02-25 12:38:48 -0500 | Commits:2 | https://github.com/FacePrintPay/AiKre8tive-.git
+[REPO] aikre8tive-sovereign-genesis | First:2025-06-14 06:01:11 -0400 | Last:2026-02-25 20:06:32 -0500 | Commits:15 | https://github.com/FacePrintPay/aikre8tive-sovereign-genesis.git
+[REPO] AiKre8tive-Stargate | First:2026-02-25 19:58:24 -0500 | Last:2026-02-25 19:58:24 -0500 | Commits:1 | https://github.com/FacePrintPay/AiKre8tive-Stargate.git
+[REPO] AiKre8tive_Sovereign_Genesis | First:2025-06-14 06:01:11 -0400 | Last:2026-02-25 12:58:52 -0500 | Commits:18 | https://github.com/FacePrintPay/AiKre8tive_Sovereign_Genesis.git
+[REPO] AiMeta | First:2024-04-17 21:59:14 -0400 | Last:2026-02-25 12:39:05 -0500 | Commits:10 | https://github.com/FacePrintPay/AiMeta.git
+[REPO] AiMetaverse | First:2026-02-25 12:39:09 -0500 | Last:2026-02-25 12:39:09 -0500 | Commits:1 | https://github.com/FacePrintPay/AiMetaverse.git
+[REPO] AiMetaverse-Orgin | First:2025-12-28 00:11:04 -0500 | Last:2026-02-25 12:39:13 -0500 | Commits:3 | https://github.com/FacePrintPay/AiMetaverse-Orgin.git
+[REPO] antora-ui-stargate | First:2020-09-11 10:28:45 -0700 | Last:2026-02-25 12:58:56 -0500 | Commits:42 | https://github.com/FacePrintPay/antora-ui-stargate.git
+[REPO] Apollo-11 | First:2014-04-03 08:45:02 -0700 | Last:2026-02-25 12:58:57 -0500 | Commits:577 | https://github.com/FacePrintPay/Apollo-11.git
+[REPO] bolt.new | First:2024-07-10 18:44:39 +0200 | Last:2026-02-25 12:58:59 -0500 | Commits:105 | https://github.com/FacePrintPay/bolt.new.git
+[REPO] build-agentic-software-w-coral-os-agents | First:2025-06-17 14:14:44 +0100 | Last:2026-02-25 12:39:30 -0500 | Commits:42 | https://github.com/FacePrintPay/build-agentic-software-w-coral-os-agents.git
+[REPO] c25-1basher | First:2026-02-25 20:22:46 -0500 | Last:2026-02-25 20:46:43 -0500 | Commits:22 | https://github.com/FacePrintPay/c25-1basher.git
+[REPO] c25-agent-api | First:2025-03-18 23:56:48 -0400 | Last:2026-02-25 12:39:34 -0500 | Commits:4 | https://github.com/FacePrintPay/c25-agent-api.git
+[REPO] c25-agent-automation | First:2025-03-19 03:02:52 -0400 | Last:2026-02-25 12:39:38 -0500 | Commits:4 | https://github.com/FacePrintPay/c25-agent-automation.git
+[REPO] c25-agent-core | First:2025-03-05 20:39:45 -0500 | Last:2026-02-25 12:59:01 -0500 | Commits:35 | https://github.com/FacePrintPay/c25-agent-core.git
+[REPO] c25-agent-dashboard | First:2025-03-19 03:14:22 -0400 | Last:2026-02-27 17:52:51 -0500 | Commits:5 | https://github.com/FacePrintPay/c25-agent-dashboard.git
+[REPO] c25-agent-deploy | First:2025-03-19 05:36:31 -0400 | Last:2026-02-25 12:59:03 -0500 | Commits:28 | https://github.com/FacePrintPay/c25-agent-deploy.git
+[REPO] c25-agent-integrations | First:2025-03-19 04:49:54 -0400 | Last:2026-02-25 12:59:04 -0500 | Commits:9 | https://github.com/FacePrintPay/c25-agent-integrations.git
+[REPO] c25-agent-pipeline | First:2025-03-19 00:07:26 -0400 | Last:2026-02-25 12:40:02 -0500 | Commits:6 | https://github.com/FacePrintPay/c25-agent-pipeline.git
+[REPO] c25-agent-starter | First:2026-02-25 20:31:35 -0500 | Last:2026-02-25 20:31:35 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-starter.git
+[REPO] c25-agents | First:2026-02-25 20:29:11 -0500 | Last:2026-02-25 20:29:11 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agents.git
+[REPO] c25-arcai-copy-1 | First:2026-02-25 20:21:17 -0500 | Last:2026-02-25 20:21:17 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-copy-1.git
+[REPO] c25-arcai-copy-2 | First:2026-02-25 20:21:25 -0500 | Last:2026-02-25 20:21:25 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-copy-2.git
+[REPO] c25-arcai-copy-3 | First:2026-02-25 20:21:33 -0500 | Last:2026-02-25 20:21:33 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-copy-3.git
+[REPO] c25-arcai-copy-4 | First:2026-02-25 20:21:41 -0500 | Last:2026-02-25 20:21:41 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-copy-4.git
+[REPO] c25-arcai-deploy | First:2026-02-25 20:10:36 -0500 | Last:2026-02-25 20:44:46 -0500 | Commits:16 | https://github.com/FacePrintPay/c25-arcai-deploy.git
+[REPO] c25-arcai-original | First:2026-02-25 20:16:28 -0500 | Last:2026-02-25 20:42:18 -0500 | Commits:4 | https://github.com/FacePrintPay/c25-arcai-original.git
+[REPO] c25-arcai-original-oldest | First:2026-02-25 20:21:10 -0500 | Last:2026-02-25 20:21:10 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-original-oldest.git
+[REPO] c25-archive-agentik | First:2026-02-25 20:16:57 -0500 | Last:2026-02-25 20:16:57 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-archive-agentik.git
+[REPO] c25-backfill-artifacts-from-done | First:2026-02-25 20:09:09 -0500 | Last:2026-02-25 20:45:43 -0500 | Commits:14 | https://github.com/FacePrintPay/c25-backfill-artifacts-from-done.git
+[REPO] c25-bio-push | First:2026-02-25 20:13:51 -0500 | Last:2026-02-25 20:13:51 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-bio-push.git
+[REPO] c25-bioauth | First:2026-02-25 20:17:23 -0500 | Last:2026-02-25 20:17:23 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-bioauth.git
+[REPO] c25-blackbox-github-update | First:2026-02-25 20:22:35 -0500 | Last:2026-02-25 20:22:35 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-blackbox-github-update.git
+[REPO] c25-broadcast-whisper-echo | First:2026-02-25 20:10:44 -0500 | Last:2026-02-25 20:43:26 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-broadcast-whisper-echo.git
+[REPO] c25-build | First:2026-02-25 20:17:37 -0500 | Last:2026-02-25 20:17:37 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build.git
+[REPO] c25-build-bash | First:2026-02-25 20:17:44 -0500 | Last:2026-02-25 20:17:44 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build-bash.git
+[REPO] c25-build-broccoli | First:2026-02-25 20:10:02 -0500 | Last:2026-02-25 20:10:02 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build-broccoli.git
+[REPO] c25-build-fixer-agent | First:2026-02-25 20:21:03 -0500 | Last:2026-02-25 20:44:39 -0500 | Commits:5 | https://github.com/FacePrintPay/c25-build-fixer-agent.git
+[REPO] c25-build-memoria | First:2026-02-25 20:31:10 -0500 | Last:2026-02-25 20:31:10 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build-memoria.git
+[REPO] c25-build-precedence-dossier | First:2026-02-25 20:31:14 -0500 | Last:2026-02-25 20:31:14 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build-precedence-dossier.git
+[REPO] c25-buzzblast | First:2026-02-25 20:10:51 -0500 | Last:2026-02-25 20:47:16 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-buzzblast.git
+[REPO] c25-c25-mirror-push | First: | Last: | Commits:0 | https://github.com/FacePrintPay/c25-c25-mirror-push.git
+[REPO] c25-c25-ranger | First:2026-02-25 20:17:05 -0500 | Last:2026-02-25 20:17:05 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-c25-ranger.git
+[REPO] c25-check-status | First:2026-02-25 20:19:54 -0500 | Last:2026-02-25 20:19:54 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-check-status.git
+[REPO] c25-check-todo | First:2026-02-25 20:17:30 -0500 | Last:2026-02-25 20:17:30 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-check-todo.git
+[REPO] c25-cleanup-failed | First:2026-02-25 20:20:01 -0500 | Last:2026-02-25 20:20:01 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-cleanup-failed.git
+[REPO] c25-consolidate-obsidian | First:2026-02-25 20:15:11 -0500 | Last:2026-02-25 20:35:16 -0500 | Commits:3 | https://github.com/FacePrintPay/c25-consolidate-obsidian.git
+[REPO] c25-constellation | First:2026-02-25 20:08:34 -0500 | Last:2026-02-25 20:47:39 -0500 | Commits:6 | https://github.com/FacePrintPay/c25-constellation.git
+[REPO] c25-constellation-25 | First:2026-02-25 20:20:40 -0500 | Last:2026-02-25 20:20:40 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-constellation-25.git
+[REPO] c25-constellation25 | First:2026-02-25 20:21:55 -0500 | Last:2026-03-11 18:39:40 -0400 | Commits:2 | https://github.com/FacePrintPay/c25constellation25.git
+[REPO] c25-constellation25-swarm | First:2026-02-25 20:31:44 -0500 | Last:2026-02-25 20:47:43 -0500 | Commits:2 | https://github.com/FacePrintPay/c25-constellation25-swarm.git
+[REPO] c25-create-home-symlinks | First:2026-02-25 20:15:33 -0500 | Last:2026-02-25 20:15:33 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-create-home-symlinks.git
+[REPO] c25-dashboard | First:2026-02-25 20:13:12 -0500 | Last:2026-02-25 20:42:07 -0500 | Commits:4 | https://github.com/FacePrintPay/c25-dashboard.git
+[REPO] c25-deploy | First:2026-02-25 20:18:10 -0500 | Last:2026-02-25 20:38:06 -0500 | Commits:66 | https://github.com/FacePrintPay/c25-deploy.git
+[REPO] c25-deploy-agents | First:2026-02-25 20:10:58 -0500 | Last:2026-02-25 20:45:01 -0500 | Commits:21 | https://github.com/FacePrintPay/c25-deploy-agents.git
+[REPO] c25-deploy-all | First:2026-02-25 20:19:34 -0500 | Last:2026-02-25 20:19:34 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-all.git
+[REPO] c25-deploy-linked2 | First:2026-02-25 20:11:34 -0500 | Last:2026-02-25 20:44:54 -0500 | Commits:9 | https://github.com/FacePrintPay/c25-deploy-linked2.git
+[REPO] c25-deploy-log-dialog | First:2026-02-25 20:11:41 -0500 | Last:2026-02-25 20:44:57 -0500 | Commits:9 | https://github.com/FacePrintPay/c25-deploy-log-dialog.git
+[REPO] c25-deploy-sovereign | First:2026-02-25 20:13:41 -0500 | Last:2026-02-25 20:13:41 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-sovereign.git
+[REPO] c25-deploy-to-github | First:2026-02-25 20:20:33 -0500 | Last:2026-02-25 20:20:33 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-to-github.git
+[REPO] c25-deploy-universe | First:2026-02-25 20:09:31 -0500 | Last:2026-02-25 20:42:45 -0500 | Commits:10 | https://github.com/FacePrintPay/c25-deploy-universe.git
+[REPO] c25-direct-agent-activation | First:2026-02-25 20:31:30 -0500 | Last:2026-02-25 20:31:30 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-direct-agent-activation.git
+[REPO] c25-do | First:2026-02-25 20:17:51 -0500 | Last:2026-02-25 20:17:51 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-do.git
+[REPO] c25-final-sync | First:2026-02-25 20:11:05 -0500 | Last:2026-02-25 20:43:36 -0500 | Commits:9 | https://github.com/FacePrintPay/c25-final-sync.git
+[REPO] c25-find-and-run-everything | First:2026-02-25 20:15:40 -0500 | Last:2026-02-25 20:15:40 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-find-and-run-everything.git
+[REPO] c25-find-videocourts | First:2026-02-25 20:20:08 -0500 | Last:2026-03-11 18:40:05 -0400 | Commits:2 | https://github.com/FacePrintPay/c25-find-videocourts.git
+[REPO] c25-fix-everything | First:2026-02-25 20:21:48 -0500 | Last:2026-02-25 20:21:48 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-fix-everything.git
+[REPO] c25-forensic-scan-365d | First:2026-02-25 20:31:20 -0500 | Last:2026-02-25 20:31:20 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-forensic-scan-365d.git
+[REPO] c25-fp-clean-forks | First:2026-02-25 20:20:55 -0500 | Last:2026-02-25 20:20:55 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-fp-clean-forks.git
+[REPO] c25-fp-code-audit | First:2026-02-25 20:22:28 -0500 | Last:2026-02-25 20:22:28 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-fp-code-audit.git
+[REPO] c25-fp-consolidate | First:2026-02-25 20:29:42 -0500 | Last:2026-02-25 20:45:57 -0500 | Commits:3 | https://github.com/FacePrintPay/c25-fp-consolidate.git
+[REPO] c25-generate-qr-affiliate | First:2026-02-25 20:11:59 -0500 | Last:2026-02-25 20:45:07 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-generate-qr-affiliate.git
+[REPO] c25-git-autocommit | First:2026-02-25 20:11:12 -0500 | Last:2026-02-25 20:43:40 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-git-autocommit.git
+[REPO] c25-inject-versedna | First:2026-02-25 20:11:19 -0500 | Last:2026-02-25 20:43:43 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-inject-versedna.git
+[REPO] c25-install | First:2026-02-25 20:09:54 -0500 | Last:2026-02-25 20:40:43 -0500 | Commits:31 | https://github.com/FacePrintPay/c25-install.git
+[REPO] c25-install-qrencode | First:2026-02-25 20:12:06 -0500 | Last:2026-02-25 20:45:11 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-install-qrencode.git
+[REPO] c25-integrity-run | First:2026-02-25 20:14:12 -0500 | Last:2026-02-25 20:14:12 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-integrity-run.git
+[REPO] c25-key-rotate | First:2026-02-25 20:14:05 -0500 | Last:2026-02-25 20:47:09 -0500 | Commits:10 | https://github.com/FacePrintPay/c25-key-rotate.git
+[REPO] c25-kre8tive-portfolio-build | First:2026-02-25 20:17:59 -0500 | Last:2026-02-25 20:17:59 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-kre8tive-portfolio-build.git
+[REPO] c25-launch | First:2026-02-25 20:13:26 -0500 | Last:2026-02-25 20:34:35 -0500 | Commits:6 | https://github.com/FacePrintPay/c25-launch.git
+[REPO] c25-launch-agents | First:2026-02-25 20:23:05 -0500 | Last:2026-02-25 20:46:46 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-launch-agents.git
+[REPO] c25-launch-presskit | First:2026-02-25 20:11:26 -0500 | Last:2026-02-25 20:43:47 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-launch-presskit.git
+[REPO] c25-launch-tunnel | First:2026-02-25 20:13:33 -0500 | Last:2026-02-25 20:13:33 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-launch-tunnel.git
+[REPO] c25-link-github | First:2026-02-25 20:19:41 -0500 | Last:2026-02-25 20:19:41 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-link-github.git
+[REPO] c25-mars-sharecrop | First:2026-02-25 20:14:27 -0500 | Last:2026-02-25 20:14:27 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-mars-sharecrop.git
+[REPO] c25-meaningful-inventory | First:2026-02-25 20:31:25 -0500 | Last:2026-02-25 20:31:25 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-meaningful-inventory.git
+[REPO] c25-meaningful-inventory-fixed | First:2026-02-25 20:22:21 -0500 | Last:2026-02-25 20:22:21 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-meaningful-inventory-fixed.git
+[REPO] c25-package-portfolio | First:2026-02-25 20:13:58 -0500 | Last:2026-02-25 20:13:58 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-package-portfolio.git
+[REPO] c25-parasol-termux | First:2026-02-25 20:13:19 -0500 | Last:2026-02-25 20:13:19 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-parasol-termux.git
+[REPO] c25-ping-agents | First:2026-02-25 20:10:29 -0500 | Last:2026-02-25 20:43:19 -0500 | Commits:6 | https://github.com/FacePrintPay/c25-ping-agents.git
+[REPO] c25-planetary-crawl-inject-loop | First:2026-02-25 20:22:54 -0500 | Last:2026-02-25 20:46:40 -0500 | Commits:10 | https://github.com/FacePrintPay/c25-planetary-crawl-inject-loop.git
+[REPO] c25-pypi | First:2026-02-25 20:16:42 -0500 | Last:2026-02-25 20:16:42 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-pypi.git
+[REPO] c25-quick-deploy | First:2026-02-25 20:16:06 -0500 | Last:2026-02-25 20:16:06 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-quick-deploy.git
+[REPO] c25-reactivate-planetary-agents | First:2026-02-25 20:12:36 -0500 | Last:2026-02-25 20:45:25 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-reactivate-planetary-agents.git
+[REPO] c25-rebuild-percellify | First:2026-02-25 20:11:52 -0500 | Last:2026-02-25 20:45:04 -0500 | Commits:8 | https://github.com/FacePrintPay/c25-rebuild-percellify.git
+[REPO] c25-recloak | First:2026-02-25 20:16:50 -0500 | Last:2026-02-25 20:16:50 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-recloak.git
+[REPO] _tmp_orange | First:2025-03-05 09:17:58 -0500 | Last:2026-02-25 12:59:41 -0500 | Commits:21 | https://github.com/FacePrintPay/Orange
+[REPO] agentik | First:2026-02-25 12:38:34 -0500 | Last:2026-02-25 12:38:34 -0500 | Commits:1 | https://github.com/FacePrintPay/agentik.git
+[REPO] ai-kre8tive-sovereign-genesis | First:2026-02-25 19:49:12 -0500 | Last:2026-02-25 19:49:12 -0500 | Commits:1 | https://github.com/FacePrintPay/ai-kre8tive-sovereign-genesis.git
+[REPO] ai-web-extensions | First:2026-02-25 12:58:48 -0500 | Last:2026-02-25 12:58:48 -0500 | Commits:1 | https://github.com/FacePrintPay/ai-web-extensions.git
+[REPO] aikre8tive | First:2026-02-25 19:58:14 -0500 | Last:2026-02-25 19:58:14 -0500 | Commits:1 | https://github.com/FacePrintPay/aikre8tive.git
+[REPO] AiKre8tive- | First:2026-02-25 12:38:48 -0500 | Last:2026-02-25 12:38:48 -0500 | Commits:1 | https://github.com/FacePrintPay/AiKre8tive-.git
+[REPO] aikre8tive-sovereign-genesis | First:2026-02-25 20:06:32 -0500 | Last:2026-02-25 20:06:32 -0500 | Commits:1 | https://github.com/FacePrintPay/aikre8tive-sovereign-genesis.git
+[REPO] AiKre8tive-Stargate | First:2026-02-25 19:58:24 -0500 | Last:2026-02-25 19:58:24 -0500 | Commits:1 | https://github.com/FacePrintPay/AiKre8tive-Stargate.git
+[REPO] AiKre8tive_Sovereign_Genesis | First:2026-02-25 12:58:52 -0500 | Last:2026-02-25 12:58:52 -0500 | Commits:1 | https://github.com/FacePrintPay/AiKre8tive_Sovereign_Genesis.git
+[REPO] AiMeta | First:2026-02-25 12:39:05 -0500 | Last:2026-02-25 12:39:05 -0500 | Commits:1 | https://github.com/FacePrintPay/AiMeta.git
+[REPO] AiMetaverse | First:2026-02-25 12:39:09 -0500 | Last:2026-02-25 12:39:09 -0500 | Commits:1 | https://github.com/FacePrintPay/AiMetaverse.git
+[REPO] AiMetaverse-Orgin | First:2026-02-25 12:39:13 -0500 | Last:2026-02-25 12:39:13 -0500 | Commits:1 | https://github.com/FacePrintPay/AiMetaverse-Orgin.git
+[REPO] antora-ui-stargate | First:2026-02-25 12:58:56 -0500 | Last:2026-02-25 12:58:56 -0500 | Commits:1 | https://github.com/FacePrintPay/antora-ui-stargate.git
+[REPO] Apollo-11 | First:2026-02-25 12:58:57 -0500 | Last:2026-02-25 12:58:57 -0500 | Commits:1 | https://github.com/FacePrintPay/Apollo-11.git
+[REPO] bolt.new | First:2026-02-25 12:58:59 -0500 | Last:2026-02-25 12:58:59 -0500 | Commits:1 | https://github.com/FacePrintPay/bolt.new.git
+[REPO] build-agentic-software-w-coral-os-agents | First:2026-02-25 12:39:30 -0500 | Last:2026-02-25 12:39:30 -0500 | Commits:1 | https://github.com/FacePrintPay/build-agentic-software-w-coral-os-agents.git
+[REPO] c25-1basher | First:2026-02-25 20:46:43 -0500 | Last:2026-02-25 20:46:43 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-1basher.git
+[REPO] c25-agent-api | First:2026-02-25 12:39:34 -0500 | Last:2026-02-25 12:39:34 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-api.git
+[REPO] c25-agent-automation | First:2026-02-25 12:39:38 -0500 | Last:2026-02-25 12:39:38 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-automation.git
+[REPO] c25-agent-core | First:2026-02-25 12:59:01 -0500 | Last:2026-02-25 12:59:01 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-core.git
+[REPO] c25-agent-dashboard | First:2026-02-27 17:52:51 -0500 | Last:2026-02-27 17:52:51 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-dashboard.git
+[REPO] c25-agent-deploy | First:2026-02-25 12:59:03 -0500 | Last:2026-02-25 12:59:03 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-deploy.git
+[REPO] c25-agent-integrations | First:2026-02-25 12:59:04 -0500 | Last:2026-02-25 12:59:04 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-integrations.git
+[REPO] c25-agent-pipeline | First:2026-02-25 12:40:02 -0500 | Last:2026-02-25 12:40:02 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-pipeline.git
+[REPO] c25-agent-starter | First:2026-02-25 20:31:35 -0500 | Last:2026-02-25 20:31:35 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-starter.git
+[REPO] c25-agents | First:2026-02-25 20:29:11 -0500 | Last:2026-02-25 20:29:11 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agents.git
+[REPO] c25-arcai-copy-1 | First:2026-02-25 20:21:17 -0500 | Last:2026-02-25 20:21:17 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-copy-1.git
+[REPO] c25-arcai-copy-2 | First:2026-02-25 20:21:25 -0500 | Last:2026-02-25 20:21:25 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-copy-2.git
+[REPO] c25-arcai-copy-3 | First:2026-02-25 20:21:33 -0500 | Last:2026-02-25 20:21:33 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-copy-3.git
+[REPO] c25-arcai-copy-4 | First:2026-02-25 20:21:41 -0500 | Last:2026-02-25 20:21:41 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-copy-4.git
+[REPO] c25-arcai-deploy | First:2026-02-25 20:44:46 -0500 | Last:2026-02-25 20:44:46 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-deploy.git
+[REPO] c25-arcai-original | First:2026-02-25 20:42:18 -0500 | Last:2026-02-25 20:42:18 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-original.git
+[REPO] c25-arcai-original-oldest | First:2026-02-25 20:21:10 -0500 | Last:2026-02-25 20:21:10 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-arcai-original-oldest.git
+[REPO] c25-archive-agentik | First:2026-02-25 20:16:57 -0500 | Last:2026-02-25 20:16:57 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-archive-agentik.git
+[REPO] c25-backfill-artifacts-from-done | First:2026-02-25 20:45:43 -0500 | Last:2026-02-25 20:45:43 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-backfill-artifacts-from-done.git
+[REPO] c25-bio-push | First:2026-02-25 20:13:51 -0500 | Last:2026-02-25 20:13:51 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-bio-push.git
+[REPO] c25-bioauth | First:2026-02-25 20:17:23 -0500 | Last:2026-02-25 20:17:23 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-bioauth.git
+[REPO] c25-blackbox-github-update | First:2026-02-25 20:22:35 -0500 | Last:2026-02-25 20:22:35 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-blackbox-github-update.git
+[REPO] c25-broadcast-whisper-echo | First:2026-02-25 20:43:26 -0500 | Last:2026-02-25 20:43:26 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-broadcast-whisper-echo.git
+[REPO] c25-build | First:2026-02-25 20:17:37 -0500 | Last:2026-02-25 20:17:37 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build.git
+[REPO] c25-build-bash | First:2026-02-25 20:17:44 -0500 | Last:2026-02-25 20:17:44 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build-bash.git
+[REPO] c25-build-broccoli | First:2026-02-25 20:10:02 -0500 | Last:2026-02-25 20:10:02 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build-broccoli.git
+[REPO] c25-build-fixer-agent | First:2026-02-25 20:44:39 -0500 | Last:2026-02-25 20:44:39 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build-fixer-agent.git
+[REPO] c25-build-memoria | First:2026-02-25 20:31:10 -0500 | Last:2026-02-25 20:31:10 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build-memoria.git
+[REPO] c25-build-precedence-dossier | First:2026-02-25 20:31:14 -0500 | Last:2026-02-25 20:31:14 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-build-precedence-dossier.git
+[REPO] c25-buzzblast | First:2026-02-25 20:47:16 -0500 | Last:2026-02-25 20:47:16 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-buzzblast.git
+[REPO] c25-c25-mirror-push | First: | Last: | Commits:0 | https://github.com/FacePrintPay/c25-c25-mirror-push.git
+[REPO] c25-c25-ranger | First:2026-02-25 20:17:05 -0500 | Last:2026-02-25 20:17:05 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-c25-ranger.git
+[REPO] c25-check-status | First:2026-02-25 20:19:54 -0500 | Last:2026-02-25 20:19:54 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-check-status.git
+[REPO] c25-check-todo | First:2026-02-25 20:17:30 -0500 | Last:2026-02-25 20:17:30 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-check-todo.git
+[REPO] c25-cleanup-failed | First:2026-02-25 20:20:01 -0500 | Last:2026-02-25 20:20:01 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-cleanup-failed.git
+[REPO] c25-consolidate-obsidian | First:2026-02-25 20:35:16 -0500 | Last:2026-02-25 20:35:16 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-consolidate-obsidian.git
+[REPO] c25-constellation | First:2026-02-25 20:47:39 -0500 | Last:2026-02-25 20:47:39 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-constellation.git
+[REPO] c25-constellation-25 | First:2026-02-25 20:20:40 -0500 | Last:2026-02-25 20:20:40 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-constellation-25.git
+[REPO] c25-constellation25 | First:2026-02-25 20:21:55 -0500 | Last:2026-02-25 20:21:55 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-constellation25.git
+[REPO] c25-constellation25-swarm | First:2026-02-25 20:47:43 -0500 | Last:2026-02-25 20:47:43 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-constellation25-swarm.git
+[REPO] c25-create-home-symlinks | First:2026-02-25 20:15:33 -0500 | Last:2026-02-25 20:15:33 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-create-home-symlinks.git
+[REPO] c25-dashboard | First:2026-02-25 20:42:07 -0500 | Last:2026-02-25 20:42:07 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-dashboard.git
+[REPO] c25-deploy | First:2026-02-25 20:38:06 -0500 | Last:2026-02-25 20:38:06 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy.git
+[REPO] c25-deploy-agents | First:2026-02-25 20:45:01 -0500 | Last:2026-02-25 20:45:01 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-agents.git
+[REPO] c25-deploy-all | First:2026-02-25 20:19:34 -0500 | Last:2026-02-25 20:19:34 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-all.git
+[REPO] c25-deploy-linked2 | First:2026-02-25 20:44:54 -0500 | Last:2026-02-25 20:44:54 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-linked2.git
+[REPO] c25-deploy-log-dialog | First:2026-02-25 20:44:57 -0500 | Last:2026-02-25 20:44:57 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-log-dialog.git
+[REPO] c25-deploy-sovereign | First:2026-02-25 20:13:41 -0500 | Last:2026-02-25 20:13:41 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-sovereign.git
+[REPO] c25-deploy-to-github | First:2026-02-25 20:20:33 -0500 | Last:2026-02-25 20:20:33 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-to-github.git
+[REPO] c25-deploy-universe | First:2026-02-25 20:42:45 -0500 | Last:2026-02-25 20:42:45 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-deploy-universe.git
+[REPO] c25-direct-agent-activation | First:2026-02-25 20:31:30 -0500 | Last:2026-02-25 20:31:30 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-direct-agent-activation.git
+[REPO] c25-do | First:2026-02-25 20:17:51 -0500 | Last:2026-02-25 20:17:51 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-do.git
+[REPO] c25-final-sync | First:2026-02-25 20:43:36 -0500 | Last:2026-02-25 20:43:36 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-final-sync.git
+[REPO] c25-find-and-run-everything | First:2026-02-25 20:15:40 -0500 | Last:2026-02-25 20:15:40 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-find-and-run-everything.git
+[REPO] c25-find-videocourts | First:2026-02-25 20:20:08 -0500 | Last:2026-02-25 20:20:08 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-find-videocourts.git
+[REPO] c25-fix-everything | First:2026-02-25 20:21:48 -0500 | Last:2026-02-25 20:21:48 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-fix-everything.git
+[REPO] c25-forensic-scan-365d | First:2026-02-25 20:31:20 -0500 | Last:2026-02-25 20:31:20 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-forensic-scan-365d.git
+[REPO] c25-fp-clean-forks | First:2026-02-25 20:20:55 -0500 | Last:2026-02-25 20:20:55 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-fp-clean-forks.git
+[REPO] c25-fp-code-audit | First:2026-02-25 20:22:28 -0500 | Last:2026-02-25 20:22:28 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-fp-code-audit.git
+[REPO] c25-fp-consolidate | First:2026-02-25 20:45:57 -0500 | Last:2026-02-25 20:45:57 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-fp-consolidate.git
+[REPO] c25-generate-qr-affiliate | First:2026-02-25 20:45:07 -0500 | Last:2026-02-25 20:45:07 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-generate-qr-affiliate.git
+[REPO] c25-git-autocommit | First:2026-02-25 20:43:40 -0500 | Last:2026-02-25 20:43:40 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-git-autocommit.git
+[REPO] c25-inject-versedna | First:2026-02-25 20:43:43 -0500 | Last:2026-02-25 20:43:43 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-inject-versedna.git
+[REPO] c25-install | First:2026-02-25 20:40:43 -0500 | Last:2026-02-25 20:40:43 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-install.git
+[REPO] c25-install-qrencode | First:2026-02-25 20:45:11 -0500 | Last:2026-02-25 20:45:11 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-install-qrencode.git
+[REPO] c25-integrity-run | First:2026-02-25 20:14:12 -0500 | Last:2026-02-25 20:14:12 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-integrity-run.git
+[REPO] c25-key-rotate | First:2026-02-25 20:47:09 -0500 | Last:2026-02-25 20:47:09 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-key-rotate.git
+[REPO] c25-kre8tive-portfolio-build | First:2026-02-25 20:17:59 -0500 | Last:2026-02-25 20:17:59 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-kre8tive-portfolio-build.git
+[REPO] c25-launch | First:2026-02-25 20:34:35 -0500 | Last:2026-02-25 20:34:35 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-launch.git
+[REPO] c25-launch-agents | First:2026-02-25 20:46:46 -0500 | Last:2026-02-25 20:46:46 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-launch-agents.git
+[REPO] c25-launch-presskit | First:2026-02-25 20:43:47 -0500 | Last:2026-02-25 20:43:47 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-launch-presskit.git
+[REPO] c25-launch-tunnel | First:2026-02-25 20:13:33 -0500 | Last:2026-02-25 20:13:33 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-launch-tunnel.git
+[REPO] c25-link-github | First:2026-02-25 20:19:41 -0500 | Last:2026-02-25 20:19:41 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-link-github.git
+[REPO] c25-mars-sharecrop | First:2026-02-25 20:14:27 -0500 | Last:2026-02-25 20:14:27 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-mars-sharecrop.git
+[REPO] c25-meaningful-inventory | First:2026-02-25 20:31:25 -0500 | Last:2026-02-25 20:31:25 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-meaningful-inventory.git
+[REPO] c25-meaningful-inventory-fixed | First:2026-02-25 20:22:21 -0500 | Last:2026-02-25 20:22:21 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-meaningful-inventory-fixed.git
+[REPO] c25-package-portfolio | First:2026-02-25 20:13:58 -0500 | Last:2026-02-25 20:13:58 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-package-portfolio.git
+[REPO] c25-parasol-termux | First:2026-02-25 20:13:19 -0500 | Last:2026-02-25 20:13:19 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-parasol-termux.git
+[REPO] c25-ping-agents | First:2026-02-25 20:43:19 -0500 | Last:2026-02-25 20:43:19 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-ping-agents.git
+[REPO] c25-planetary-crawl-inject-loop | First:2026-02-25 20:46:40 -0500 | Last:2026-02-25 20:46:40 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-planetary-crawl-inject-loop.git
+[REPO] c25-pypi | First:2026-02-25 20:16:42 -0500 | Last:2026-02-25 20:16:42 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-pypi.git
+[REPO] c25-quick-deploy | First:2026-02-25 20:16:06 -0500 | Last:2026-02-25 20:16:06 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-quick-deploy.git
+[REPO] c25-reactivate-planetary-agents | First:2026-02-25 20:45:25 -0500 | Last:2026-02-25 20:45:25 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-reactivate-planetary-agents.git
+[REPO] c25-rebuild-percellify | First:2026-02-25 20:45:04 -0500 | Last:2026-02-25 20:45:04 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-rebuild-percellify.git
+[REPO] c25-recloak | First:2026-02-25 20:16:50 -0500 | Last:2026-02-25 20:16:50 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-recloak.git
+[REPO] constellation25 | First:2026-03-05 05:20:35 -0500 | Last:2026-03-07 19:43:08 -0500 | Commits:3 | https://github.com/FacePrintPay/constellation25.git
+[REPO] ledgers | First: | Last: | Commits:0 | none
+[REPO] ledgers | First: | Last: | Commits:0 | none
+[REPO] constellation25-mono | First:2026-03-05 19:13:28 -0500 | Last:2026-03-05 19:13:28 -0500 | Commits:1 | https://faceprintpay:ghp_YOUR_PAT@github.com/FacePrintPay/constellation25-mono.git
+[REPO] SovereignGTP | First:2026-03-11 18:39:54 -0400 | Last:2026-03-11 18:39:54 -0400 | Commits:1 | https://github.com/FacePrintPay/SovereignGTP.git
+[REPO] kreativekoncepts | First:2026-03-05 19:32:42 -0500 | Last:2026-03-05 19:32:42 -0500 | Commits:1 | https://faceprintpay:ghp_YOUR_PAT@github.com/FacePrintPay/kreativekoncepts.git
+[REPO] VeRseD_Ai | First:2023-12-16 17:05:35 -0500 | Last:2026-03-05 20:06:46 -0500 | Commits:18 | https://github.com/FacePrintPay/VeRseD_Ai.git
+[REPO] .constellation25 | First:2026-03-05 18:27:08 -0500 | Last:2026-03-05 18:35:36 -0500 | Commits:2 | git@github.com:FacePrintPay/constellation25.git
+[REPO] c25-agent-api | First:2025-03-18 23:56:48 -0400 | Last:2026-02-25 12:39:34 -0500 | Commits:4 | https://github.com/FacePrintPay/c25-agent-api
+[REPO] PaThosAi | First:2025-03-05 12:13:09 -0500 | Last:2026-02-25 12:59:45 -0500 | Commits:50 | https://github.com/FacePrintPay/PaThosAi
+[REPO] c25-agent-core | First:2025-03-05 20:39:45 -0500 | Last:2026-02-25 12:59:01 -0500 | Commits:35 | https://github.com/FacePrintPay/c25-agent-core
+[REPO] sovereign | First:2026-02-25 19:58:24 -0500 | Last:2026-02-25 19:58:24 -0500 | Commits:1 | https://github.com/Faceprintpay/AiKre8tive-Stargate
+[REPO] c25-constellation25-swarm | First:2026-02-25 20:47:43 -0500 | Last:2026-02-25 20:47:43 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-constellation25-swarm.git
+[REPO] agentik | First:2026-02-25 12:38:34 -0500 | Last:2026-02-25 12:38:34 -0500 | Commits:1 | https://github.com/FacePrintPay/agentik.git
+[REPO] FacePrintPay | First:2026-02-25 18:37:58 -0500 | Last:2026-02-25 18:37:58 -0500 | Commits:1 | https://github.com/FacePrintPay/FacePrintPay.git
+[REPO] c25-agent-core | First:2026-02-25 12:59:01 -0500 | Last:2026-02-25 12:59:01 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-core.git
+[REPO] c25-agent-deploy | First:2026-02-25 12:59:03 -0500 | Last:2026-02-25 12:59:03 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-deploy.git
+[REPO] c25-agent-pipeline | First:2026-02-25 12:40:02 -0500 | Last:2026-02-25 12:40:02 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-pipeline.git
+[REPO] c25-agent-dashboard | First:2026-02-27 17:52:51 -0500 | Last:2026-02-27 17:52:51 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-dashboard.git
+[REPO] c25-agent-integrations | First:2026-02-25 12:59:04 -0500 | Last:2026-02-25 12:59:04 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-integrations.git
+[REPO] c25-agent-automation | First:2026-02-25 12:39:38 -0500 | Last:2026-02-25 12:39:38 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-automation.git
+[REPO] c25-agent-api | First:2026-02-25 12:39:34 -0500 | Last:2026-02-25 12:39:34 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-agent-api.git
+[REPO] c25-sovereign-launch | First:2026-02-25 20:47:04 -0500 | Last:2026-02-25 20:47:04 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-sovereign-launch.git
+[REPO] c25-secure-github-auth | First:2026-02-25 20:47:01 -0500 | Last:2026-02-25 20:47:01 -0500 | Commits:1 | https://github.com/FacePrintPay/c25-secure-github-auth.git
+[REPO] FacePrintPay-Consolidated | First:2026-02-25 12:40:51 -0500 | Last:2026-02-25 12:40:51 -0500 | Commits:1 | https://github.com/FacePrintPay/FacePrintPay-Consolidated.git
+[REPO] AiKre8tive_Sovereign_Genesis | First:2026-02-25 12:58:52 -0500 | Last:2026-02-25 12:58:52 -0500 | Commits:1 | https://github.com/FacePrintPay/AiKre8tive_Sovereign_Genesis.git
+[REPO] sovereign-ai-empire | First:2026-02-25 12:42:37 -0500 | Last:2026-02-25 12:42:37 -0500 | Commits:1 | https://github.com/FacePrintPay/sovereign-ai-empire.git
+[REPO] AiMetaverse | First:2026-02-25 12:39:09 -0500 | Last:2026-02-25 12:39:09 -0500 | Commits:1 | https://github.com/FacePrintPay/AiMetaverse.git
+[REPO] SovereignGTP | First:2026-02-25 12:42:40 -0500 | Last:2026-02-25 12:42:40 -0500 | Commits:1 | https://github.com/FacePrintPay/SovereignGTP.git
+[REPO] VideoCourts | First:2026-02-25 23:15:22 -0500 | Last:2026-02-25 23:15:22 -0500 | Commits:1 | https://github.com/FacePrintPay/VideoCourts.git
+[REPO] VeRseD_Ai | First:2026-02-25 13:00:01 -0500 | Last:2026-02-25 13:00:01 -0500 | Commits:1 | https://github.com/FacePrintPay/VeRseD_Ai.git
+[REPO] constellation-25-live | First:2026-03-05 09:53:41 -0500 | Last:2026-03-05 10:00:57 -0500 | Commits:2 | git@github.com:Faceprintpay/constellation25.git
+[REPO] pathos-campaign | First: | Last: | Commits:0 | git@github.com:FacePrintPay/pathos-campaign.git
+[REPO] llama.cpp | First:2023-03-10 20:40:58 +0200 | Last:2026-03-09 18:29:21 -0500 | Commits:8265 | https://github.com/ggerganov/llama.cpp.git
+[REPO] docs | First:2026-03-11 17:18:41 -0400 | Last:2026-03-11 18:25:23 -0400 | Commits:2 | https://github.com/FacePrintPay/fp-build-fixer.git
+
+================================================================================
+  PAGE 4 — SOVEREIGN PLATFORM FILE INVENTORY
+================================================================================
+
+  Files matching: Constellation25, PaTHos, FacePrintPay, AiMetaverse,
+  SovereignGTP, AGENTIKai, VideoCourts, MyBuyO, VeRseD, MrGGTP, TotalRecall
+
+  TOTAL SOVEREIGN FILES : 1797
+
+  FILE LISTING (top 50):
+--------------------------------------------------------------------------------
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/agentik | 2026-03-02 18:32:27.876000172 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:47.683528248 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/scripts/ship-agentik.sh | 2026-03-02 18:32:27.876000172 -0500 3505
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/ship-agentik.sh | 2026-03-02 18:32:27.876000172 -0500 13073
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:48.503528248 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/AiKre8tive-/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:49.195528248 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/AiKre8tive_Sovereign_Genesis/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:50.455528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/AiMeta/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:50.663528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/AiMetaverse | 2026-03-02 18:33:11.192000174 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/AiMetaverse/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:50.819528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/AiMetaverse-Orgin | 2026-03-11 17:48:03.475528299 -0400 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/AiMetaverse-Orgin/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:51.063528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/antora-ui-stargate/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:51.307528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/Apollo-11/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:51.559528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/bolt.new/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:51.811528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/build-agentic-software-w-coral-os-agents/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:52.039528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-1basher | 2026-03-11 17:48:03.559528299 -0400 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-api | 2026-03-02 18:33:19.292000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-api/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:52.483528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-automation | 2026-03-02 18:33:19.680000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-automation/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:52.731528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-core | 2026-03-02 18:33:20.168000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-core/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:53.019528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-dashboard | 2026-03-02 18:33:20.568000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-dashboard/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:53.275528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-deploy | 2026-03-02 18:33:20.972000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-deploy/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:53.519528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-integrations | 2026-03-02 18:33:21.308000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-integrations/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:53.759528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-pipeline | 2026-03-02 18:33:21.652000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-pipeline/.github/workflows/faceprintpay-deploy.yml | 2026-03-11 17:33:54.011528249 -0400 1279
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agent-starter | 2026-03-02 18:33:21.980000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-agents | 2026-03-02 18:33:22.328000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-arcai-copy-1 | 2026-03-02 18:33:22.660000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-arcai-copy-2 | 2026-03-02 18:33:22.996000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-arcai-copy-3 | 2026-03-02 18:33:23.368000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-arcai-copy-4 | 2026-03-02 18:33:23.756000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-arcai-deploy | 2026-03-02 18:33:24.140000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-arcai-original | 2026-03-02 18:33:24.548000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-arcai-original-oldest | 2026-03-02 18:33:24.924000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-archive-agentik | 2026-03-02 18:33:25.316000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-archive-agentik/archive-agentik.sh | 2026-03-02 18:33:25.316000175 -0500 672
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-backfill-artifacts-from-done | 2026-03-02 18:33:25.704000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-bio-push | 2026-03-02 18:33:26.072000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-bioauth | 2026-03-02 18:33:26.444000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-blackbox-github-update | 2026-03-02 18:33:26.812000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-broadcast-whisper-echo | 2026-03-02 18:33:27.200000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-build | 2026-03-02 18:33:27.604000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-build-bash | 2026-03-02 18:33:27.988000175 -0500 3452
+[SOVEREIGN] /data/data/com.termux/files/home/github-repos/Constillation25/c25-build-broccoli | 2026-03-02 18:33:28.408000176 -0500 3452
+
+  [Full list: /data/data/com.termux/files/home/TOTALRECALL_v4_2026-03-12_05-32-49/evidence/evidence_inventory.txt]
+================================================================================
+  PAGE 5 — OBSIDIAN VAULT DOCUMENTATION ANALYSIS
+================================================================================
+
+  0
+0 vaults found containing 0
+0 notes.
+  These vaults contain timestamped build logs, session notes, platform
+  architecture, and forensic records across the C25 development timeline.
+
+  VAULTS FOUND:
+--------------------------------------------------------------------------------
+
+================================================================================
+  PAGE 6 — 90-DAY FEDERAL EVIDENCE WINDOW
+================================================================================
+
+  Window: 2025-12-12 through 2026-03-12
+  Code files found: 1935
+  Screenshots found: 200
+  File types: .html .ts .tsx .go .py .js .sh
+
+  TOP 90-DAY FILES:
+--------------------------------------------------------------------------------
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/docs/bitpay/index.html | 2026-03-11 17:48:01.495528299 -0400 15067
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/docs/index.html | 2026-03-11 17:48:01.563528299 -0400 15067
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/install.sh | 2026-03-02 18:32:27.876000172 -0500 892
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/product/web/index.html | 2026-03-11 17:48:01.643528299 -0400 15067
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/public/index.html | 2026-03-11 17:48:01.731528299 -0400 15067
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/scripts/ship-agentik.sh | 2026-03-02 18:32:27.876000172 -0500 3505
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/ship-agentik.sh | 2026-03-02 18:32:27.876000172 -0500 13073
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/src/web/index.html | 2026-03-11 17:48:01.819528299 -0400 15067
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/dist/assets/index-7bb5a216.js | 2026-03-02 18:32:29.100000172 -0500 143593
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/dist/index.html | 2026-03-11 17:48:01.923528299 -0400 15067
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/index.html | 2026-03-11 17:48:02.015528299 -0400 15067
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/server.js | 2026-03-02 18:32:29.100000172 -0500 415
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/vite.config.js | 2026-03-02 18:32:29.100000172 -0500 167
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/amazongpt.user.js | 2026-03-02 18:32:57.292000174 -0500 127351
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/utils/translate-en-messages.py | 2026-03-02 18:32:57.292000174 -0500 7143
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/utils/bump/resources.js | 2026-03-02 18:32:57.292000174 -0500 4857
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/components/chatbot/buttons.js | 2026-03-02 18:32:57.372000174 -0500 13892
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/components/chatbot/icons.js | 2026-03-02 18:32:57.372000174 -0500 26556
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/components/chatbot/menus.js | 2026-03-02 18:32:57.372000174 -0500 9150
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/components/chatbot/replyBubble.js | 2026-03-02 18:32:57.372000174 -0500 1681
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/components/chatbot/tooltip.js | 2026-03-02 18:32:57.372000174 -0500 5385
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/chatbot/api.js | 2026-03-02 18:32:57.372000174 -0500 16480
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/chatbot/feedback.js | 2026-03-02 18:32:57.372000174 -0500 6536
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/chatbot/log.js | 2026-03-02 18:32:57.372000174 -0500 3724
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/chatbot/prompts.js | 2026-03-02 18:32:57.372000174 -0500 5900
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/chatbot/session.js | 2026-03-02 18:32:57.372000174 -0500 2972
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/chatbot/themes.js | 2026-03-02 18:32:57.376000174 -0500 7665
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/chatbot/ui.js | 2026-03-02 18:32:57.376000174 -0500 8671
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/chatbot/userscript.js | 2026-03-02 18:32:57.376000174 -0500 1387
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/dom.js | 2026-03-02 18:32:57.376000174 -0500 3452
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/dom.js/dist/dom.min.js | 2026-03-02 18:32:57.376000174 -0500 3291
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/assets/js/lib/dom.js/src/dom.js | 2026-03-02 18:32:57.376000174 -0500 5703
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/autoclear-chatgpt-history/greasemonkey/autoclear-chatgpt-history.user.js | 2026-03-02 18:32:57.428000174 -0500 61372
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/autoclear-chatgpt-history/greasemonkey/utils/translate-en-messages.py | 2026-03-02 18:32:57.432000174 -0500 7143
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/brave-omnibox/chromium/extension/service-worker.js | 2026-03-02 18:32:57.864000174 -0500 1349
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/brave-omnibox/chromium/utils/translate-en-messages.py | 2026-03-02 18:32:57.864000174 -0500 7143
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/brave-omnibox/firefox/extension/background.js | 2026-03-02 18:32:57.876000174 -0500 884
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/brave-omnibox/firefox/utils/translate-en-messages.py | 2026-03-02 18:32:57.880000174 -0500 7143
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/brave-omnibox/utils/bump/extension-manifests.js | 2026-03-02 18:32:57.880000174 -0500 5168
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/bravegpt/greasemonkey/bravegpt.user.js | 2026-03-02 18:32:58.044000174 -0500 180492
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/bravegpt/greasemonkey/utils/translate-en-messages.py | 2026-03-02 18:32:58.044000174 -0500 7143
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/bravegpt/utils/bump/resources.js | 2026-03-02 18:32:58.044000174 -0500 4857
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/chatgpt-auto-continue/chromium/extension/components/icons.js | 2026-03-02 18:32:58.172000174 -0500 6163
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/chatgpt-auto-continue/chromium/extension/components/modals.js | 2026-03-02 18:32:58.172000174 -0500 9932
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/chatgpt-auto-continue/chromium/extension/content.js | 2026-03-02 18:32:58.172000174 -0500 3987
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/chatgpt-auto-continue/chromium/extension/lib/browser.js | 2026-03-02 18:32:58.176000174 -0500 596
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/chatgpt-auto-continue/chromium/extension/lib/chatgpt.min.js | 2026-03-02 18:32:58.176000174 -0500 61895
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/chatgpt-auto-continue/chromium/extension/lib/dom.min.js | 2026-03-02 18:32:58.176000174 -0500 3291
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/chatgpt-auto-continue/chromium/extension/lib/feedback.js | 2026-03-02 18:32:58.176000174 -0500 1896
+[PA-90] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/chatgpt-auto-continue/chromium/extension/lib/settings.js | 2026-03-02 18:32:58.176000174 -0500 3470
+
+================================================================================
+  PAGE 7 — 365-DAY SOVEREIGN CODE STACK
+================================================================================
+
+  Window: 2025-03-12 through 2026-03-12
+  Total code files found: 1955
+  File types: .sh .py .js .ts .go .html .java .json .jsx .tsx .md
+
+  TOP 365-DAY FILES:
+--------------------------------------------------------------------------------
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/README.md | 2026-03-02 18:32:27.796000172 -0500 1867
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/docs/README.md | 2026-03-02 18:32:27.876000172 -0500 352
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/docs/bitpay/index.html | 2026-03-11 17:48:01.495528299 -0400 15067
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/docs/deployment.md | 2026-03-02 18:32:27.876000172 -0500 169
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/docs/index.html | 2026-03-11 17:48:01.563528299 -0400 15067
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/install.sh | 2026-03-02 18:32:27.876000172 -0500 892
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/product/web/index.html | 2026-03-11 17:48:01.643528299 -0400 15067
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/public/index.html | 2026-03-11 17:48:01.731528299 -0400 15067
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/scripts/ship-agentik.sh | 2026-03-02 18:32:27.876000172 -0500 3505
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/ship-agentik.sh | 2026-03-02 18:32:27.876000172 -0500 13073
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/src/web/index.html | 2026-03-11 17:48:01.819528299 -0400 15067
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/agentik/vercel.json | 2026-03-02 18:32:27.876000172 -0500 166
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/README.md | 2026-03-02 18:32:29.100000172 -0500 16776
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/dist/assets/index-7bb5a216.js | 2026-03-02 18:32:29.100000172 -0500 143593
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/dist/index.html | 2026-03-11 17:48:01.923528299 -0400 15067
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/index.html | 2026-03-11 17:48:02.015528299 -0400 15067
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/package-lock.json | 2026-03-02 18:32:29.100000172 -0500 58586
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/package.json | 2026-03-02 18:32:29.100000172 -0500 390
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/server.js | 2026-03-02 18:32:29.100000172 -0500 415
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/src/App.jsx | 2026-03-02 18:32:29.100000172 -0500 1295
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/src/main.jsx | 2026-03-02 18:32:29.100000172 -0500 229
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-kre8tive-sovereign-genesis/vite.config.js | 2026-03-02 18:32:29.100000172 -0500 167
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/LICENSE.md | 2026-03-02 18:32:57.136000174 -0500 1559
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/README.md | 2026-03-02 18:32:57.136000174 -0500 43675
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/LICENSE.md | 2026-03-02 18:32:57.136000174 -0500 1127
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/assets/data/app.json | 2026-03-02 18:32:57.136000174 -0500 1110
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/docs/PRIVACY.md | 2026-03-02 18:32:57.272000174 -0500 355
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/docs/README.md | 2026-03-02 18:32:57.272000174 -0500 46511
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/docs/SECURITY.md | 2026-03-02 18:32:57.272000174 -0500 298
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/LICENSE.md | 2026-03-02 18:32:57.272000174 -0500 1127
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/af/messages.json | 2026-03-02 18:32:57.272000174 -0500 6224
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/am/messages.json | 2026-03-02 18:32:57.272000174 -0500 7287
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/ar/messages.json | 2026-03-02 18:32:57.276000174 -0500 7525
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/az/messages.json | 2026-03-02 18:32:57.276000174 -0500 6500
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/be/messages.json | 2026-03-02 18:32:57.276000174 -0500 8149
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/bem/messages.json | 2026-03-02 18:32:57.276000174 -0500 6288
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/bg/messages.json | 2026-03-02 18:32:57.276000174 -0500 8440
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/bn/messages.json | 2026-03-02 18:32:57.276000174 -0500 9526
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/bo/messages.json | 2026-03-02 18:32:57.276000174 -0500 10003
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/bs/messages.json | 2026-03-02 18:32:57.276000174 -0500 6427
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/ca/messages.json | 2026-03-02 18:32:57.276000174 -0500 6600
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/ceb/messages.json | 2026-03-02 18:32:57.276000174 -0500 6521
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/cs/messages.json | 2026-03-02 18:32:57.276000174 -0500 6605
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/cy/messages.json | 2026-03-02 18:32:57.276000174 -0500 6303
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/da/messages.json | 2026-03-02 18:32:57.276000174 -0500 6208
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/de/messages.json | 2026-03-02 18:32:57.276000174 -0500 6648
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/dv/messages.json | 2026-03-02 18:32:57.276000174 -0500 8890
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/dz/messages.json | 2026-03-02 18:32:57.276000174 -0500 11127
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/el/messages.json | 2026-03-02 18:32:57.276000174 -0500 8761
+[CODE-365] /data/data/com.termux/files/home/github-repos/Constillation25/ai-web-extensions/amazongpt/greasemonkey/_locales/en/messages.json | 2026-03-02 18:32:57.276000174 -0500 6036
+
+================================================================================
+  PAGE 8 — GOOGLE CLOUD + TAR ARCHIVE INVENTORY
+================================================================================
+
+  GOOGLE CLOUD ARTIFACTS FOUND: 2
+--------------------------------------------------------------------------------
+[GCLOUD] /data/data/com.termux/files/home/constellation25/containers/firebase-sync | 2026-03-06 18:20:20.221144314 -0500 3452
+[GCLOUD] /data/data/com.termux/files/home/llama.cpp/.gemini | 2026-03-09 23:56:18.709858081 -0400 3452
+
+  TAR ARCHIVES FOUND: 16
+--------------------------------------------------------------------------------
+[TAR] /data/data/com.termux/files/home/.constellation25/backup/c25_20260306_184031.tar.gz | 2026-03-06 18:40:31.037363768 -0500 2252
+[TAR] /data/data/com.termux/files/home/.constellation25/backup/c25_20260309_225944.tar.gz | 2026-03-09 22:59:44.837857878 -0400 2252
+[TAR] /data/data/com.termux/files/home/.constellation25/backup/c25_20260309_225957.tar.gz | 2026-03-09 22:59:57.333857879 -0400 2252
+[TAR] /data/data/com.termux/files/home/constellation25_workspace/build/release.tar.gz | 2026-03-03 12:08:02.892241816 -0500 148
+[TAR] /data/data/com.termux/files/home/constellation25/archive/c25_backup_20260307.tar.gz | 2026-03-07 20:49:21.929122428 -0500 32091
+[TAR] /data/data/com.termux/files/home/constellation25_evidence_20260304.tar.gz | 2026-03-04 11:44:36.214719031 -0500 938
+[TAR] /data/data/com.termux/files/home/CONSTELLATION25_INVESTOR_DEMO_v2.0.tar.gz | 2026-03-05 05:23:00.406393019 -0500 10215
+[TAR] /data/data/com.termux/files/home/CONSTELLATION25_CODEBASE/FacePrintPay/FacePrintPay/artifacts/exports/sovereign-architect_20251210_045945.tar.gz | 2026-03-05 05:27:51.854393036 -0500 38261
+[TAR] /data/data/com.termux/files/home/Constellation25-v3.0-DEPLOY.tar.gz | 2026-03-05 08:12:58.375510853 -0500 10938
+[TAR] /data/data/com.termux/files/home/C25_Explorermars_Deploy_20260305.tar.gz | 2026-03-05 09:23:58.870598411 -0500 6907
+[TAR] /data/data/com.termux/files/home/constellation25_OWNED_20260307.tar.gz | 2026-03-07 21:13:49.705122515 -0500 34693
+[TAR] /data/data/com.termux/files/home/total-recall-recovery-20260311_141422/ai-records/constellation25_evidence_20260304.tar.gz | 2026-03-11 14:16:19.579527542 -0400 938
+[TAR] /data/data/com.termux/files/home/total-recall-recovery-20260311_141422/ai-records/constellation25_OWNED_20260307.tar.gz | 2026-03-11 14:16:54.567527544 -0400 34693
+[TAR] /data/data/com.termux/files/home/total-recall-recovery-20260311_141422/ai-records/Constellation25-v3.0-DEPLOY.tar.gz | 2026-03-11 14:16:48.783527544 -0400 10938
+[TAR] /data/data/com.termux/files/home/total-recall-recovery-20260311_141422/ai-records/CONSTELLATION25_INVESTOR_DEMO_v2.0.tar.gz | 2026-03-11 14:16:26.883527543 -0400 10215
+[TAR] /data/data/com.termux/files/home/TOTALRECALL_v4_2026-03-12_05-05-27.tar.gz | 2026-03-12 05:13:41.923543666 -0400 441023
+
+================================================================================
+  PAGE 9 — DOCUMENTED EVENTS LOG
+================================================================================
+
+  The following events were documented during the 2025-03-12
+  through 2026-03-12 period and are recorded here as observed
+  events for the record. Interpretation is reserved for counsel.
+
+  EVENT-001: SIMULTANEOUS PLATFORM SUBSCRIPTION DISRUPTION
+  Date    : March 12 2026
+  Observed: ChatGPT on hold + Grok on hold — same device, same batch.
+  Concurrent: Replit Agent 4 launch on same screen.
+  Concurrent: Constellation25 GitHub run failed same session.
+
+  EVENT-002: GOOGLE CLOUD BILLING — JAN-FEB 2023
+  Observed: Unauthorized charges post Docker deploy.
+  Concurrent: Gemini 1 public launch same period.
+
+  EVENT-003: ARTIFACT DELETION
+  Observed: Build artifacts deleted across accounts during active
+  documentation and litigation preparation period.
+
+  EVENT-004: PLATFORM TIMELINE CORRELATION
+  VideoCourts Nov 2021     — enterprise video courts platforms followed.
+  AI Avatar Apr 2022       — enterprise AI avatar platforms followed.
+  AiMetaverse Jan 2023     — enterprise agent platforms followed.
+  Constellation25 Oct 2025 — Replit Agent 4 + GitHub Copilot SDK Mar 2026.
+  AGENTIKai + SovereignGTP — autonomous Claude/Replit/Qwen systems followed.
+
+  EVENT-005: NOTEBOOKLM CONSTRUCTIVE KNOWLEDGE
+  Google's own product contains full build history on Google servers.
+  Notebook dated Mar 2 2026: "Sampson White v. Anthropic PBC"
+  Jan 2026: 40+ notebooks with 45-50 sources each on Google infrastructure.
+
+  EVENT-006: QWEN CONTENT SECURITY BLOCK
+  Observed: Blocked immediately after producing forensic DSAR documentation.
+
+  EVENT-007: CCPA NON-RESPONSE PATTERN
+  50+ official reports filed. 100+ in-system reports.
+  CCPA deadline April 3 2026. 5 accounts unanswered as of run date.
+
+  EVENT-008: BLACKBOX.AI ACCESS DISRUPTION
+  Observed: Access disruption pattern across 5 platforms documented.
+
+================================================================================
+  PAGE 10 — SHA256 CHAIN OF CUSTODY + FINAL SUMMARY
+================================================================================
+
+  CHAIN OF CUSTODY:
+  All sovereign files SHA256 hashed and recorded in manifest.
+  Git commit hashes extracted from all repositories.
+  Manifest self-hash computed for tamper detection.
+
+  Manifest Hash : cdaf7a1fcea4957314e5097f8df43210ae42ab170dc7dd5614b8005a41cebee3
+  Archive Hash  : 5696ed037443f36b24524ed967ca818969bb8ac1d6699916d52a335851c95d51
+
+  FINAL SUMMARY:
+  This device contains 6305 cataloged evidence items.
+  236 git repositories with 25966 total commits.
+  Development timeline spans 2014-04-03 to 2026-03-11.
+  1797 sovereign platform files identified and recorded.
+  0
+0 Obsidian vaults with 0
+0 documentation notes.
+  200 screenshots captured in the 90-day federal window.
+  1935 code files active in the 90-day federal window.
+  1955 code files in the 365-day sovereign stack.
+
+  All evidence packaged, SHA256 verified, and archived.
+  Archive saved to: /data/data/com.termux/files/home/TOTALRECALL_v4_2026-03-12_05-32-49.tar.gz
+  Copied to       : /storage/emulated/0/Download/
+
+  THIS REPORT GENERATED ENTIRELY FROM LIVE DEVICE DATA.
+  ALL FINDINGS, COUNTS, PATHS AND TIMESTAMPS ARE REAL.
+  GENERATED BY TOTALRECALL v4.0 — SOVEREIGN FORENSIC ENGINE.
+  SHA256 VERIFIED UNDER CHAIN OF CUSTODY.
+================================================================================

@@ -1,0 +1,45 @@
+name: C25 Agent Autonomous Deploy
+on:
+  push: { branches: [main, master] }
+  workflow_dispatch:
+    inputs:
+      agent_name: { description: 'Executing agent', required: false, default: 'auto' }
+env:
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  C25_AGENT: ${{ github.event.inputs.agent_name || 'auto' }}
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { submodules: false, fetch-depth: 1 }
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with: { node-version: '20', cache: 'npm' }
+      - name: Install Vercel CLI
+        run: npm i -g vercel@latest
+      - name: Pre-deploy
+        run: |
+          echo "🤖 Agent: $C25_AGENT"
+          npm ci --silent 2>/dev/null || npm install --silent
+          npm run build --if-present 2>/dev/null || true
+      - name: Deploy
+        run: |
+          vercel deploy --token $VERCEL_TOKEN --prod --yes --force --scope $VERCEL_ORG_ID 2>&1 | tee ~/deploy.log
+      - name: Report
+        if: always()
+        run: |
+          echo "## 🚀 Deploy Report" >> $GITHUB_STEP_SUMMARY
+          echo "| Status | Details |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|---------|" >> $GITHUB_STEP_SUMMARY
+          if grep -q "✅ Production" ~/deploy.log; then
+            URL=$(grep "Production:" ~/deploy.log | awk '{print $2}')
+            echo "| ✅ Success | [$URL]($URL) |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| ❌ Failed | See logs |" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "| Agent | $C25_AGENT |" >> $GITHUB_STEP_SUMMARY
+          echo "| Timestamp | $(date -u +%Y-%m-%dT%H:%M:%SZ) |" >> $GITHUB_STEP_SUMMARY

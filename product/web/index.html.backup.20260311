@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AGENTIK™ — local-first agent orchestration. Run on your hardware. Data stays on-device." />
+  <title>AGENTIK™ | Local-First Agent Orchestration</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .hero { text-align: center; padding: 60px 20px; position: relative; }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.10) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .logo {
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.30);
+      position: relative;
+    }
+    .tagline { font-size: 1.25rem; font-weight: 300; margin-bottom: 12px; opacity: 0.95; }
+    .subtitle {
+      font-size: 1.05rem;
+      opacity: 0.85;
+      max-width: 720px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary { background: #ffffff; color: #667eea; box-shadow: 0 8px 30px rgba(0,0,0,0.20); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.30); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.14);
+      color: #ffffff;
+      border: 2px solid rgba(255,255,255,0.28);
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.45); }
+
+    .section { background: #ffffff; color: #1a1a2e; padding: 72px 20px; }
+    .container { max-width: 1120px; margin: 0 auto; }
+    .title { text-align: center; font-size: 2.25rem; margin-bottom: 44px; color: #667eea; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 10px 34px rgba(0,0,0,0.10);
+      transition: transform 0.25s ease;
+    }
+    .card:hover { transform: translateY(-6px); }
+    .icon { font-size: 2.4rem; margin-bottom: 14px; }
+    .card-title { font-size: 1.25rem; font-weight: 900; margin-bottom: 10px; color: #667eea; }
+    .card-text { line-height: 1.6; opacity: 0.85; }
+
+    .install {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    pre {
+      background: #1a1a2e;
+      color: #2ecc71;
+      padding: 18px;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-size: 0.98rem;
+      text-align: left;
+    }
+
+    footer { background: #1a1a2e; color: #ffffff; padding: 38px 20px; text-align: center; }
+    .links { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px; }
+    .link { color: #ffffff; text-decoration: none; opacity: 0.8; }
+    .link:hover { opacity: 1; }
+
+    @media (max-width: 768px) {
+      .logo { font-size: 2.8rem; }
+      .cta { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <h1 class="logo">🌍 AGENTIK™</h1>
+    <p class="tagline">Local-First Agent Orchestration</p>
+    <p class="subtitle">
+      Run agent workflows on your hardware. Keep data on-device. Ship automations fast.
+    </p>
+
+    <nav class="cta" aria-label="Primary actions">
+      <a class="btn btn-primary" href="#install">Install</a>
+      <a class="btn btn-secondary" href="https://github.com/FacePrintPay/agentik" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Built for Sovereignty</h2>
+
+        <div class="grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">🤖</div>
+            <h3 class="card-title">Agent-ready structure</h3>
+            <p class="card-text">Clean folders for API, orchestrator, agents, monitoring, and web.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🔒</div>
+            <h3 class="card-title">Local-first by design</h3>
+            <p class="card-text">No mandatory cloud dependency. You choose your integrations.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">⚡</div>
+            <h3 class="card-title">Fast iteration</h3>
+            <p class="card-text">Scriptable workflows. Ship updates in minutes, not weeks.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🧩</div>
+            <h3 class="card-title">Modular + composable</h3>
+            <p class="card-text">Build plug-in style features without collapsing the repo.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">📱</div>
+            <h3 class="card-title">Termux-friendly</h3>
+            <p class="card-text">Built to run on Android via Termux and standard Linux shells.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🆓</div>
+            <h3 class="card-title">No monthly rent</h3>
+            <p class="card-text">Pay for compute once. Build value on top of your own stack.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="section">
+      <div class="install">
+        <h2 class="title">Install in 60 Seconds</h2>
+
+        <pre><code>curl -fsSL https://raw.githubusercontent.com/FacePrintPay/agentik/main/install.sh | bash</code></pre>
+
+        <p style="margin-top: 18px; color: #334;">
+          Then open the Web UI at:
+          <strong>product/web/index.html</strong>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a class="link" href="https://github.com/FacePrintPay/agentik" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="link" href="https://faceprintpay.github.io/agentik/bitpay/" target="_blank" rel="noreferrer">Bitpayy</a>
+    </div>
+
+    <p style="opacity: 0.75;">© 2025 FacePrintPay / TheKre8tive. Built by CyGel & The Brickle Brothers.</p>
+    <p style="opacity: 0.75; margin-top: 8px;">The revolution will not be hosted. 🌍</p>
+  </footer>
+</body>
+</html>

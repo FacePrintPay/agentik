@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constellation25 - Planetary Build Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --c25-cyan: #00d4ff;
+            --c25-purple: #8b5cf6;
+            --c25-gold: #fbbf24;
+            --bg-dark: #0a0e27;
+            --bg-darker: #050810;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-darker);
+            color: #e0e7ff;
+            overflow-x: hidden;
+        }
+        
+        /* Planetary Background */
+        .planetary-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(251, 191, 36, 0.05) 0%, transparent 70%),
+                var(--bg-darker);
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: 
+                radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.3), transparent),
+                radial-gradient(2px 2px at 40% 70%, rgba(0,212,255,0.3), transparent),
+                radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.2), transparent);
+            animation: starsMove 100s linear infinite;
+        }
+        
+        @keyframes starsMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100px); }
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, rgba(10,14,39,0.95) 0%, rgba(139,92,246,0.2) 100%);
+            border-bottom: 2px solid var(--c25-cyan);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            background: linear-gradient(135deg, var(--c25-cyan) 0%, var(--c25-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(0,212,255,0.5);
+        }
+        
+        .header-subtitle {
+            color: #94a3b8;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .planetary-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, var(--c25-purple) 0%, var(--c25-cyan) 100%);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 15px rgba(139,92,246,0.4);
+        }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        
+        /* Summary Cards */
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, rgba(15,23,42,0.9) 0%, rgba(30,41,59,0.8) 100%);
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,212,255,0.3);
+            border-color: var(--c25-cyan);
+        }
+        
+        .card-title { color: #94a3b8; font-size: 12px; text-transform: uppercase; margin-bottom: 10px; }
+        .card-value { font-size: 36px; font-weight: bold; margin: 10px 0; }
+        .card-value.success { color: #3fb950; }
+        .card-value.failed { color: #f85149; }
+        .card-value.warning { color: var(--c25-gold); }
+        .card-value.info { color: var(--c25-cyan); }
+        
+        /* Tabs */
+        .tabs { display: flex; gap: 10px; margin: 40px 0 20px; border-bottom: 2px solid rgba(0,212,255,0.2); flex-wrap: wrap; }
+        .tab-button {
+            padding: 12px 24px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: #94a3b8;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-radius: 8px 8px 0 0;
+        }
+        .tab-button:hover { color: var(--c25-cyan); }
+        .tab-button.active { color: var(--c25-cyan); border-bottom-color: var(--c25-cyan); }
+        
+        .tab-content { display: none; background: rgba(22,27,34,0.8); border: 1px solid rgba(48,54,61,0.8); border-radius: 0 0 12px 12px; padding: 20px; margin-bottom: 20px; }
+        .tab-content.active { display: block; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { background: rgba(13,17,23,0.8); color: var(--c25-cyan); padding: 12px; text-align: left; border-bottom: 2px solid rgba(48,54,61,0.8); }
+        td { padding: 10px; border-bottom: 1px solid rgba(48,54,61,0.8); }
+        tr:hover { background: rgba(13,17,23,0.5); }
+        
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; }
+        .badge-success { background: #238636; color: #fff; }
+        .badge-failed { background: #da3633; color: #fff; }
+        .badge-queued { background: #9e6a03; color: #fff; }
+        
+        pre { background: rgba(13,17,23,0.8); border: 1px solid rgba(48,54,61,0.8); border-radius: 6px; padding: 15px; overflow-x: auto; color: #79c0ff; font-size: 12px; max-height: 500px; overflow-y: auto; }
+        
+        .button { display: inline-block; padding: 8px 16px; background: #238636; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: monospace; margin-top: 10px; }
+        .button:hover { background: #2ea043; }
+        
+        .search-box { width: 100%; padding: 10px; background: rgba(13,17,23,0.8); border: 1px solid rgba(48,54,61,0.8); border-radius: 6px; color: #c9d1d9; margin-bottom: 15px; font-family: monospace; }
+        .search-box:focus { outline: none; border-color: var(--c25-cyan); }
+        
+        .chart-container { position: relative; height: 300px; margin: 20px 0; }
+        
+        .footer { text-align: center; color: #8b949e; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(48,54,61,0.8); }
+    </style>
+</head>
+<body>
+    <div class="planetary-bg"></div>
+    <div class="stars"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🌌 Constellation25</h1>
+            <div class="header-subtitle">Planetary Build Dashboard | 25 Autonomous Agents</div>
+            <div class="planetary-badge">SOVEREIGN AI EMPIRE</div>
+            <div style="color: #8b949e; margin-top: 10px;">Last Updated: <span id="timestamp"></span></div>
+        </div>
+        
+        <div class="summary">
+            <div class="card">
+                <div class="card-title">Total Builds</div>
+                <div class="card-value info" id="total">0</div>
+            </div>
+            <div class="card">
+                <div class="card-title">✅ Successful</div>
+                <div class="card-value success" id="success">0</div>
+            </div>
+            <div class="card">
+                <div class="card-title">❌ Failed</div>
+                <div class="card-value failed" id="failed">0</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Success Rate</div>
+                <div class="card-value success" id="rate">0%</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Repos</div>
+                <div class="card-value warning" id="repos">0</div>
+            </div>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('overview')">📊 Overview</button>
+            <button class="tab-button" onclick="switchTab('failures')">❌ Failures</button>
+            <button class="tab-button" onclick="switchTab('fixes')">🔧 Quick Fixes</button>
+            <button class="tab-button" onclick="switchTab('commands')">⚙️ Commands</button>
+        </div>
+        
+        <div id="overview" class="tab-content active">
+            <h2>📈 Build Status Overview</h2>
+            <div class="chart-container">
+                <canvas id="buildChart"></canvas>
+            </div>
+            <div style="background: rgba(13,17,23,0.8); padding: 15px; border-radius: 6px; margin-top: 15px;">
+                <h3 style="color: var(--c25-cyan); margin-bottom: 10px;">Next Steps:</h3>
+                <ol style="margin-left: 20px; line-height: 2;">
+                    <li>Review failed builds by category</li>
+                    <li>Run quick fix scripts</li>
+                    <li>Re-trigger builds</li>
+                    <li>Monitor success rate improvement to 80%+</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div id="failures" class="tab-content">
+            <h2>Failed Builds</h2>
+            <input type="text" class="search-box" id="failureSearch" placeholder="Search by repo or workflow...">
+            <table>
+                <thead>
+                    <tr><th>Repository</th><th>Workflow</th><th>Branch</th><th>Status</th></tr>
+                </thead>
+                <tbody id="failures-body"></tbody>
+            </table>
+        </div>
+        
+        <div id="fixes" class="tab-content">
+            <h2>🚀 Quick Fixes</h2>
+            <pre id="quick-fixes"></pre>
+            <button class="button" onclick="copyToClipboard('quick-fixes')">📋 Copy</button>
+        </div>
+        
+        <div id="commands" class="tab-content">
+            <h2>📋 Debug Commands</h2>
+            <pre id="commands"></pre>
+        </div>
+        
+        <div class="footer">
+            <p>Constellation25 Build Dashboard | FacePrintPay</p>
+            <p style="margin-top: 5px; font-size: 12px;">Target: 80%+ success rate</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toISOString();
+        
+        let buildsData = [];
+        
+        async function loadData() {
+            try {
+                const res = await fetch('data/builds.json');
+                buildsData = await res.json();
+                updateDashboard();
+            } catch (e) {
+                console.error('Error loading data:', e);
+            }
+        }
+        
+        function updateDashboard() {
+            const stats = {
+                total: buildsData.length,
+                success: buildsData.filter(b => b.conclusion === 'success').length,
+                failed: buildsData.filter(b => b.conclusion === 'failure').length
+            };
+            
+            document.getElementById('total').textContent = stats.total;
+            document.getElementById('success').textContent = stats.success;
+            document.getElementById('failed').textContent = stats.failed;
+            document.getElementById('rate').textContent = stats.total ? Math.round(stats.success * 100 / stats.total) + '%' : '0%';
+            document.getElementById('repos').textContent = new Set(buildsData.map(b => b.repo)).size;
+            
+            // Chart
+            new Chart(document.getElementById('buildChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: [`Success (${stats.success})`, `Failed (${stats.failed})`, `Other (${stats.total - stats.success - stats.failed})`],
+                    datasets: [{
+                        data: [stats.success, stats.failed, stats.total - stats.success - stats.failed],
+                        backgroundColor: ['#3fb950', '#f85149', '#0969da'],
+                        borderColor: '#0a0e27',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { labels: { color: '#c9d1d9' } } }
+                }
+            });
+            
+            // Failures table
+            const failures = buildsData.filter(b => b.conclusion === 'failure');
+            document.getElementById('failures-body').innerHTML = failures.map(f => `
+                <tr>
+                    <td>${f.repo}</td>
+                    <td>${f.workflow}</td>
+                    <td><code>${f.branch}</code></td>
+                    <td><span class="badge badge-failed">FAILED</span></td>
+                </tr>
+            `).join('');
+            
+            // Quick fixes
+            document.getElementById('quick-fixes').textContent = `# Quick Fixes
+## 1. Clear Caches
+npm cache clean --force
+rm -rf node_modules/.cache
+
+## 2. Update Dependencies
+npm install --legacy-peer-deps
+npm audit fix
+
+## 3. Retry Failed Builds
+gh run list --repo FacePrintPay/<REPO> --status failure --json databaseId -q '.[].databaseId' | xargs -I {} gh run rerun {} --repo FacePrintPay/<REPO>
+
+## 4. Verify Secrets
+gh secret list --repo FacePrintPay/<REPO>`;
+            
+            // Commands
+            document.getElementById('commands').textContent = `# Debug Commands
+gh run view <RUN_ID> --repo FacePrintPay/<REPO> --log
+gh run rerun <RUN_ID> --repo FacePrintPay/<REPO>
+gh workflow list --repo FacePrintPay/<REPO>
+gh secret list --repo FacePrintPay/<REPO>`;
+        }
+        
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function copyToClipboard(id) {
+            navigator.clipboard.writeText(document.getElementById(id).textContent);
+            alert('✅ Copied!');
+        }
+        
+        document.getElementById('failureSearch').addEventListener('keyup', function(e) {
+            const search = e.target.value.toLowerCase();
+            document.querySelectorAll('#failures-body tr').forEach(row => {
+                row.style.display = row.textContent.toLowerCase().includes(search) ? '' : 'none';
+            });
+        });
+        
+        loadData();
+    </script>
+</body>
+</html>

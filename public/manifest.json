@@ -1,0 +1,15 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "Sovereign platform module for Constellation25",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Open https://constellation25-nu.vercel.app'",
+    "build": "echo 'Already built - static HTML'"
+  },
+  "constellation25": {
+    "backend": "https://constellation25-nu.vercel.app/api",
+    "agents": ["earth", "moon", "polaris"],
+    "sovereign": true
+  }
+}

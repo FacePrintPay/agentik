@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "public": true,
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/api/(.*)", "dest": "https://constellation25-nu.vercel.app/api//data/data/com.termux/files/home/archives/agentik/agentik/docs/index.html" },
+    { "src": "/(.*)", "dest": "//data/data/com.termux/files/home/archives/agentik/agentik/docs/index.html" }
+  ]
+}

@@ -1,0 +1,96 @@
+<<<<<<< HEAD
+.vercel
+
+# Termux / OS
+.DS_Store
+*.log
+*.pid
+.tmp/
+
+# Python
+=======
+*.log
+*.pid
+.pids/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+tasks/
+outputs/
+
+# ---- Termux/OS junk ----
+.DS_Store
+*.log
+
+# ---- Caches that should NEVER be committed ----
+.cargo/
+.rustup/
+.node-gyp/
+npm-debug.log*
+.yarn/
+.pnpm-store/
+.cache/
+.venv/
+__pycache__/
+*.pyc
+
+# ---- Nested repo folder (don’t track as embedded repo) ----
+AGENTIK/
+
+# --- Termux / local junk ---
+.cache/
+.tmp/
+*.log
+*.pid
+
+# --- Python ---
+>>>>>>> origin/main
+__pycache__/
+*.pyc
+.venv/
+.env
+
+<<<<<<< HEAD
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+
+# Rust (DO NOT COMMIT REGISTRY)
+=======
+# --- Node ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Rust / Cargo ---
+>>>>>>> origin/main
+.cargo/registry/
+.cargo/git/
+target/
+
+<<<<<<< HEAD
+# Caches
+.cache/
+=======
+# --- OS ---
+.DS_Store
+Thumbs.db
+.termux/
+.npm/
+.config/
+.ssh/
+.gnupg/
+*.key
+*.pem
+venv/
+npm-debug.log*
+yarn-debug.log*
+pnpm-lock.yaml
+.env.tokens
+*.secret
+>>>>>>> origin/main
+npm-debug.log*
+yarn-debug.log*

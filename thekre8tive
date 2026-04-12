@@ -1,0 +1,26 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+STACK="$HOME/full_stack_integration.sh"
+
+usage(){
+  cat <<EOF
+Usage: thekre8tive {up|down|restart|status|logs}
+
+Expected control script:
+  $STACK
+
+If missing, create it and make it executable.
+EOF
+}
+
+cmd="${1:-help}"
+case "$cmd" in
+  up|down|restart|status|logs)
+    [ -x "$STACK" ] || { echo "Missing: $STACK" >&2; exit 1; }
+    bash "$STACK" "$cmd"
+    ;;
+  *)
+    usage
+    ;;
+esac
